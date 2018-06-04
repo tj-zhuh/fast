@@ -1,0 +1,136 @@
+﻿<div class="center-header-container">
+	<div class="center-header-title">
+		<div class="center-header-title-show">整体调试管理</div>
+	</div>
+	<div class="center-header-query">
+		<div class="header-query-search">
+			<label class="header-query-search-label">源名:</label>
+			<input id="txtDICTATE_NAME" class="header-query-search-input" type="text" />
+		</div>
+		<div class="header-query-search">
+			<label class="header-query-search-label">开始时间：</label>
+			<input id="txtSEQUENCE_BEGIN" class="header-query-search-input" type="text" />
+		</div>
+		<div class="header-query-search">
+			@*<label class="header-query-search-label">调试状态：</label>*@
+			@*<input id="txtSEQUENCE_ID" class="header-query-search-input" type="text" />*@
+			<a id="btnQuery" class="center-header-button-query" href="javascript:HeaderQueryData();"></a>
+			<a id="btnFeeds" class="center-header-button-feeds" href="javascript:XYCStatusChange();"></a>
+			<a id="btnChoise" class="center-header-button-choise" href="javascript:HeaderTaskSelect();"></a>
+		</div>
+		@*<div class="header-query-function">
+				<a id="btnAdd" class="center-header-button-add" href="javascript:void(0);"></a>
+				<a id="btnImport" class="center-header-button-import" href="javascript:void(0);"></a>
+				<a id="btnExport" class="center-header-button-export" href="javascript:void(0);"></a>
+			</div>*@
+	</div>
+</div>
+
+<div class="center-grid-basic-border grid-area-minimun">
+	<div class="center-grid-first-header">
+		<div class="center-grid-first-header-title"></div>
+		<a id="btmCancel" class="button-grid-cancel" href="javascript:GridViewClose();"></a>
+		<a id="btmMinimize" class="button-grid-minimize " href="javascript:ViewMinimumSize();"></a>
+		<a id="btmRefresh" class="button-grid-refresh" href="javascript:HeaderQueryData();"></a>
+	</div>
+
+	<div id="pnlGirdView" class="center-grid-basic-area"></div>
+</div>
+<div id="detailTask" class="x-hide" onmouseout="HumanHiddenDelegate()" onmouseover="EnterHiddenDelegate()">
+	<div id="first"></div>
+	<div id="first_state"></div>
+	<div id="second"></div>
+	<div id="second_state"></div>
+	<div id="third"></div>
+	<div id="third_state"></div>
+	<div id="forth"></div>
+	<div id="forth_state"></div>
+	<div id="fifth"></div>
+	<div id="fifth_state"></div>
+	<ul class="tasksecondstatus" style="display: none;">
+		<li><span>主动反射面控制</span><img id="10701" /></li>
+		<li><span>主动反射面测量</span><img id="10401" /></li>
+		<li><span>主动反射面健康监测</span><img id="10501" /></li>
+		<li><span>馈源支撑整体控制</span><img id="10101" /></li>
+		<li><span>馈源支撑测量</span><img id="10201" /></li>
+		<li><span>馈源支撑健康监测</span><img id="10301" /></li>
+		<li><span>接收机与终端</span><img id="10601" /></li>
+	</ul>
+</div>
+@*<div class="rightbottom">
+		<div id="DebugManage" class="totalCenterPanel">
+			<div class="centerHeader">
+				<div class="centerHeaderTitle">整体调试管理</div>
+				<div class="centerHeaderButtons">
+					<a class="centerCollapseButton collapseDelButton" href="javascript:GridPanelToggle();"></a>
+					<a class="centerRefreshButton" href="javascript:HeaderQueryData();"></a>
+				</div>
+			</div>
+			<div class="centerContent">
+				<div id="pnlGirdView" class="totalCenterDiv"></div>
+				<div class="bottombutton">
+					<a id="btmMoveTop" href="javascript:OrderTaskToFirst();"></a>
+					<a id="btmMoveUp" href="javascript:OrderTaskToQuick();"></a>
+					<a id="btmMoveDown" href="javascript:OrderTaskToDown();"></a>
+					<a id="btmMoveBottom" href="javascript:OrderTaskToLast();"></a>
+					<input id="btmToggleCheckbox" type="checkbox" />
+					<a id="btmDelete" href="javascript:ReomveObserverTask();"></a>
+				</div>
+			</div>
+		</div>
+	</div>*@
+
+@*<div id="detailTask" class="x-hide" onmouseout="HumanHiddenDelegate()" onmouseover="EnterHiddenDelegate()">
+		<ul>
+			<li id="first" class="firstclass"><a class="first" href="javascript:void(0);"><em></em></a><span>自检指令下发</span><i id="i10"></i></li>
+			<ul class="tasksecondstatus" style="display: none;">
+				<li><span>主动反射面控制服务器</span><i id="i11"></i></li>
+				<li><span>主动反射面测量服务器</span><i id="i12"></i></li>
+				<li><span>主动反射面健康监测服务器</span><i id="i13"></i></li>
+				<li><span>馈源支撑整体控制服务器</span><i id="i14"></i></li>
+				<li><span>馈源支撑测量服务器</span><i id="i15"></i></li>
+				<li><span>馈源支撑健康监测服务器</span><i id="i16"></i></li>
+				<li><span>接收机与终端服务器</span><i id="i17"></i></li>
+			</ul>
+			<li id="second" class="firstclass"><a href="javascript:void(0);"><em></em></a><span>收取控制权指令下发</span><i id="i20"></i></li>
+			<ul class="tasksecondstatus" style="display: none;">
+				<li><span>主动反射面控制服务器</span><i id="i21"></i></li>
+				<li><span>主动反射面测量服务器</span><i id="i22"></i></li>
+				<li><span>主动反射面健康监测服务器</span><i id="i23"></i></li>
+				<li><span>馈源支撑整体控制服务器</span><i id="i24"></i></li>
+				<li><span>馈源支撑测量服务器</span><i id="i25"></i></li>
+				<li><span>馈源支撑健康监测服务器</span><i id="i26"></i></li>
+				<li><span>接收机与终端服务器</span><i id="i27"></i></li>
+			</ul>
+			<li id="third" class="firstclass"><a href="javascript:void(0);"><em></em></a><span>关闭干扰源</span><i id="i30"></i></li>
+			<ul class="tasksecondstatus" style="display: none;">
+				<li><span>主动反射面控制服务器</span><i id="i31"></i></li>
+				<li><span>主动反射面测量服务器</span><i id="i32"></i></li>
+				<li><span>主动反射面健康监测服务器</span><i id="i33"></i></li>
+				<li><span>馈源支撑整体控制服务器</span><i id="i34"></i></li>
+				<li><span>馈源支撑测量服务器</span><i id="i35"></i></li>
+				<li><span>馈源支撑健康监测服务器</span><i id="i36"></i></li>
+				<li><span>接收机与终端服务器</span><i id="i37"></i></li>
+			</ul>
+			<li id="forth" class="firstclass"><a href="javascript:void(0);"><em></em></a><span>天文观测指令下发</span><i id="i40"></i></li>
+			<ul class="tasksecondstatus" style="display: none;">
+				<li><span>主动反射面控制服务器</span><i id="i41"></i></li>
+				<li><span>主动反射面测量服务器</span><i id="i42"></i></li>
+				<li><span>主动反射面健康监测服务器</span><i id="i43"></i></li>
+				<li><span>馈源支撑整体控制服务器</span><i id="i44"></i></li>
+				<li><span>馈源支撑测量服务器</span><i id="i45"></i></li>
+				<li><span>馈源支撑健康监测服务器</span><i id="i46"></i></li>
+				<li><span>接收机与终端服务器</span><i id="i47"></i></li>
+			</ul>
+			<li id="fifth" class="firstclass"><a href="javascript:void(0);"><em></em></a><span>指令检查</span><i id="i50" class="notfinish"></i></li>
+			<ul class="tasksecondstatus" style="display: none;">
+				<li><span>主动反射面控制服务器</span><i id="i51"></i></li>
+				<li><span>主动反射面测量服务器</span><i id="i52"></i></li>
+				<li><span>主动反射面健康监测服务器</span><i id="i53"></i></li>
+				<li><span>馈源支撑整体控制服务器</span><i id="i54"></i></li>
+				<li><span>馈源支撑测量服务器</span><i id="i55" class="notfinish"></i></li>
+				<li><span>馈源支撑健康监测服务器</span><i id="i56" class="notfinish"></i></li>
+				<li><span>接收机与终端服务器</span><i id="i57" class="notfinish"></i></li>
+			</ul>
+		</ul>
+	</div>*@

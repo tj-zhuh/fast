@@ -1,0 +1,457 @@
+﻿@{
+	Layout = "~/Views/BigScreen/_ScreenLayout.cshtml";
+}
+
+<script src="~/Web_GlobalResources/FASTjs-V1.0/BigScreen/MonitorScreen.js"></script>
+<style type="text/css">
+	#s1 .line {
+		margin-left: 15px;
+	}
+
+	#s1 .line1 {
+		font-size: 30px;
+		color: #ffffff;
+		line-height: 37px;
+		height: 62px;
+		margin-top: 43px;
+	}
+
+	#taskState {
+		font-size: 48px;
+		color: #d0cb25;
+	}
+
+	#s1 .line2, #s1 .line4 {
+		font-size: 25px;
+		margin-top: 30px;
+		color: #ffffff;
+		line-height: 31px;
+		height: 31px;
+	}
+
+	#s1 .line3, #s1 .line5 {
+		height: 41px;
+		margin-top: 12px;
+	}
+
+	#s1 .taskbar {
+		height: 33px;
+		line-height: 33px;
+		color: #ffffff;
+		font-size: 24px;
+		text-align: right;
+		border-radius: 16px 16px;
+		position: absolute;
+		padding-right: 10px;
+	}
+
+	#s1 .complete {
+		background-color: #17be00;
+		z-index: 1;
+		white-space: nowrap;
+	}
+
+	#s1 .total {
+		background-color: #0343c9;
+		width: 581px;
+	}
+
+	#taskTime1 {
+		width: 0px;
+	}
+
+	#taskSequence1 {
+		width: 0px;
+	}
+
+	#s2 .line {
+		height: 45px;
+		margin-left: 15px;
+		font-size: 36px;
+		color: #9ae6f3;
+		margin-top: 19px;
+	}
+
+	#s2 .blue-text {
+		color: #00feff;
+	}
+
+	#s2 .line1 {
+		margin-top: 26px;
+	}
+
+		#s2 .line1 i {
+			margin-left: 164px;
+		}
+
+	#s2 .line2 span {
+		display: inline-block;
+	}
+
+	#curDate {
+		width: 205px;
+	}
+
+	#curMJD {
+		margin-left: 30px;
+	}
+
+	#s2 .line3 {
+		margin-top: 40px;
+	}
+
+	#s3 .line {
+		height: 39px;
+		font-size: 30px;
+		color: #ffffff;
+		margin-top: 19px;
+	}
+
+	#s3 span {
+		display: inline-block;
+		width: 320px;
+		text-align: right;
+	}
+
+	#s3 .blue-text {
+		color: #00feff;
+		font-size: 36px;
+		width: 190px;
+	}
+
+	.s45 {
+		color: #9ae6f3;
+		font-size: 24px;
+	}
+
+		.s45 .box-subtitle {
+			margin-top: 23px;
+		}
+
+			.s45 .box-subtitle.secondtitle {
+				margin-top: 18px;
+				height: 76px;
+			}
+
+		.s45 div {
+			margin-left: 15px;
+			height: 50px;
+		}
+
+		.s45 span {
+			display: inline-block;
+		}
+
+		.s45 .box-text {
+			width: 225px;
+		}
+
+		.s45 .tag-trd {
+			color: #ffffff;
+			width: 20px;
+		}
+
+		.s45 .blue-text {
+			color: #00feff;
+		}
+
+		.s45 .green-text {
+			color: #04f604;
+		}
+
+		.s45 .yellow-text {
+			color: #fff000;
+		}
+
+	#s6 .el {
+		width: 51px;
+		text-align: right;
+	}
+</style>
+
+<div id="container" class="container-monitor monitor6">
+	<div id="s1">
+		<div class="line line1">
+			当前观测任务状态 : <span id="taskState">未开始</span>
+		</div>
+		<div class="line line2">观测时间</div>
+		<div class="line line3">
+			<div id="taskTime1" class="taskbar complete">已时间 : <span id="taskTimeComplete"></span></div>
+			<div id="taskTime2" class="taskbar total">总共时间 : <span id="taskTimeTotal"></span></div>
+		</div>
+		<div class="line line4">观测队列</div>
+		<div class="line line5">
+			<div id="taskSequence1" class="taskbar complete">已完成 : <span id="taskSequenceComplete"></span></div>
+			<div id="taskSequence2" class="taskbar total">总共 : <span id="taskSequenceTotal"></span></div>
+		</div>
+	</div>
+	<div id="s2">
+		<div class="line line1">
+			日期<i>&nbsp;</i>儒略日
+		</div>
+		<div class="line line2">
+			<span id="curDate" class="blue-text"></span>
+			<span id="curMJD" class="blue-text"></span>
+		</div>
+		<div class="line line3">
+			<span>本地时</span>
+			<span>:</span>
+			<span id="curTime" class="time-text blue-text"></span>
+		</div>
+		<div class="line line4">
+			<span>世界时</span>
+			<span>:</span>
+			<span id="curUT" class="time-text blue-text"></span>
+		</div>
+		<div class="line line5">
+			<span>恒星时</span>
+			<span>:</span>
+			<span id="curStartime" class="time-text blue-text"></span>
+		</div>
+	</div>
+	@*<div id="s2">
+			<div class="line line1" style="margin-left:60px;">
+				日期<i style="margin-left:230px;">&nbsp;</i>儒略日
+			</div>
+			<div class="line line2">
+				<span id="curDate" class="blue-text" style="margin-left:50px;"></span>
+				<span id="curMJD" class="blue-text" style="margin-left:90px;"></span>
+			</div>
+			<div class="line line3" style="margin-top:35px;">
+				<span style="margin-left:80px;">本地时</span>
+				<span style="margin-left:15px;">:</span>
+				<span id="curTime" class="time-text blue-text" style="margin-left:75px;"></span>
+			</div>
+			<div class="line line4">
+				<span style="margin-left:80px;">世界时</span>
+				<span style="margin-left:15px;">:</span>
+				<span id="curUT" class="time-text blue-text" style="margin-left:75px;"></span>
+			</div>
+			<div class="line line5">
+				<span style="margin-left:80px;">恒星时</span>
+				<span style="margin-left:15px;">:</span>
+				<span id="curStartime" class="time-text blue-text" style="margin-left:75px;"></span>
+			</div>
+		</div>*@
+
+	<div id="s3">
+		<div id="s3_1">
+			<div class="line line1">
+				<span>主光轴偏差</span>
+				<span id="devAxis" class="blue-text">00.00</span>
+			</div>
+			<div class="line line2">
+				<span>径向偏差</span>
+				<span id="devRadial" class="blue-text">00.00</span>
+			</div>
+			<div class="line line3">
+				<span>多波束自旋偏差</span>
+				<span id="devMulti" class="blue-text">00.00</span>
+			</div>
+		</div>
+		<div id="s3_2">
+			<div class="line line1">
+				<span>馈源AB轴偏差</span>
+				<span id="devAxis" class="blue-text">00.00</span>
+			</div>
+			<div class="line line2">
+				<span>馈源相位中心偏差</span>
+				<span id="devRadial" class="blue-text">00.00</span>
+			</div>
+			<div class="line line3">
+				<span>反射面偏差</span>
+				<span id="devMulti" class="blue-text">00.00</span>
+			</div>
+		</div>
+	</div>
+	<div id="s4" class="s45">
+		<div class="box-subtitle">
+			指向
+		</div>
+		<div class="box-line">
+			<span class="tag-trd">T</span>
+			<span>RA</span>
+			<span>:</span>
+			<span id="dirTRA" class="box-text blue-text"></span>
+			<span>DEC</span>
+			<span>:</span>
+			<span id="dirTDEC" class="box-text blue-text"></span>
+		</div>
+		<div class="box-line">
+			<span class="tag-trd">R</span>
+			<span>RA</span>
+			<span>:</span>
+			<span id="dirRRA" class="box-text blue-text"></span>
+			<span>DEC</span>
+			<span>:</span>
+			<span id="dirRDEC" class="box-text blue-text"></span>
+		</div>
+		<div class="box-line">
+			<span class="tag-trd">D</span>
+			<span>RA</span>
+			<span>:</span>
+			<span id="dirDRA" class="box-text green-text"></span>
+			<span>DEC</span>
+			<span>:</span>
+			<span id="dirDDEC" class="box-text yellow-text"></span>
+		</div>
+		<div class="box-subtitle secondtitle">
+			扫描偏移
+		</div>
+		<div class="box-line">
+			<span class="tag-trd">T</span>
+			<span>RA</span>
+			<span>:</span>
+			<span id="scanTRA" class="box-text blue-text"></span>
+			<span>DEC</span>
+			<span>:</span>
+			<span id="scanTDEC" class="box-text blue-text"></span>
+		</div>
+
+		<div class="box-line">
+			<span class="tag-trd">R</span>
+			<span>RA</span>
+			<span>:</span>
+			<span id="scanRRA" class="box-text blue-text"></span>
+			<span>DEC</span>
+			<span>:</span>
+			<span id="scanRDEC" class="box-text blue-text"></span>
+		</div>
+		<div class="box-line">
+			<span class="tag-trd">D</span>
+			<span>RA</span>
+			<span>:</span>
+			<span id="scanDRA" class="box-text green-text"></span>
+			<span>DEC</span>
+			<span>:</span>
+			<span id="scanDDEC" class="box-text yellow-text"></span>
+		</div>
+	</div>
+	<div id="s5" class="s45">
+		<div class="box-subtitle">
+			指向
+		</div>
+		<div class="box-line">
+			<span class="tag-trd">T</span>
+			<span>RA</span>
+			<span>:</span>
+			<span id="dirTL" class="box-text blue-text"></span>
+			<span>DEC</span>
+			<span>:</span>
+			<span id="dirTB" class="box-text blue-text"></span>
+		</div>
+
+		<div class="box-line">
+			<span class="tag-trd">R</span>
+			<span>RA</span>
+			<span>:</span>
+			<span id="dirRL" class="box-text blue-text"></span>
+			<span>DEC</span>
+			<span>:</span>
+			<span id="dirRB" class="box-text blue-text"></span>
+		</div>
+		<div class="box-line">
+			<span class="tag-trd">D</span>
+			<span>RA</span>
+			<span>:</span>
+			<span id="dirDL" class="box-text green-text"></span>
+			<span>DEC</span>
+			<span>:</span>
+			<span id="dirDB" class="box-text yellow-text"></span>
+		</div>
+		<div class="box-subtitle secondtitle">
+			扫描偏移
+		</div>
+		<div class="box-line">
+			<span class="tag-trd">T</span>
+			<span>RA</span>
+			<span>:</span>
+			<span id="scanTL" class="box-text blue-text"></span>
+			<span>DEC</span>
+			<span>:</span>
+			<span id="scanTB" class="box-text blue-text"></span>
+		</div>
+
+		<div class="box-line">
+			<span class="tag-trd">R</span>
+			<span>RA</span>
+			<span>:</span>
+			<span id="scanRL" class="box-text blue-text"></span>
+			<span>DEC</span>
+			<span>:</span>
+			<span id="scanRB" class="box-text blue-text"></span>
+		</div>
+		<div class="box-line">
+			<span class="tag-trd">D</span>
+			<span>RA</span>
+			<span>:</span>
+			<span id="scanDL" class="box-text green-text"></span>
+			<span>DEC</span>
+			<span>:</span>
+			<span id="scanDB" class="box-text yellow-text"></span>
+		</div>
+	</div>
+	<div id="s6" class="s45">
+		<div class="box-subtitle">
+			指向
+		</div>
+		<div class="box-line">
+			<span class="tag-trd">T</span>
+			<span>RA</span>
+			<span>:</span>
+			<span id="appTRA" class="box-text blue-text"></span>
+			<span class="el">DEC</span>
+			<span>:</span>
+			<span id="appTDEC" class="box-text blue-text"></span>
+		</div>
+
+		<div class="box-line">
+			<span class="tag-trd">R</span>
+			<span>RA</span>
+			<span>:</span>
+			<span id="appRRA" class="box-text blue-text"></span>
+			<span class="el">DEC</span>
+			<span>:</span>
+			<span id="appRDEC" class="box-text blue-text"></span>
+		</div>
+		<div class="box-line">
+			<span class="tag-trd">D</span>
+			<span>RA</span>
+			<span>:</span>
+			<span id="appDRA" class="box-text green-text"></span>
+			<span class="el">DEC</span>
+			<span>:</span>
+			<span id="appDDEC" class="box-text yellow-text"></span>
+		</div>
+		<div class="box-subtitle secondtitle">
+		</div>
+		<div class="box-line">
+			<span class="tag-trd">T</span>
+			<span>AZ</span>
+			<span>:</span>
+			<span id="dirTAS" class="box-text blue-text"></span>
+			<span class="el">EL</span>
+			<span>:</span>
+			<span id="dirTH" class="box-text blue-text"></span>
+		</div>
+
+		<div class="box-line">
+			<span class="tag-trd">R</span>
+			<span>AZ</span>
+			<span>:</span>
+			<span id="dirRAS" class="box-text blue-text"></span>
+			<span class="el">EL</span>
+			<span>:</span>
+			<span id="dirRH" class="box-text blue-text"></span>
+		</div>
+		<div class="box-line">
+			<span class="tag-trd">D</span>
+			<span>AZ</span>
+			<span>:</span>
+			<span id="dirDAS" class="box-text green-text"></span>
+			<span class="el">EL</span>
+			<span>:</span>
+			<span id="dirRH" class="box-text yellow-text"></span>
+		</div>
+	</div>
+</div>

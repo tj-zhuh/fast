@@ -1,0 +1,85 @@
+﻿@{
+	ViewBag.Title = "Navigator";
+}
+
+<style>
+	a {
+		display: inline-block;
+		width: 30%;
+		height: 30%;
+		position: absolute;
+	}
+
+		a img {
+			width: 100%;
+			height: 100%;
+		}
+
+	#task {
+		left: 2.5%;
+		top: 20%;
+	}
+
+	#monitor {
+		left: 35%;
+		top: 20%;
+	}
+
+	#alarm {
+		left: 67.5%;
+		top: 20%;
+	}
+
+	#reflector {
+		left: 2.5%;
+		top: 55%;
+	}
+
+	#feed {
+		left: 35%;
+		top: 55%;
+	}
+
+	#home {
+		left: 67.5%;
+		top: 55%;
+	}
+
+	#monitor6 {
+		width: 5%;
+		height: 7%;
+		left: 60%;
+		top: 12%;
+	}
+
+	h1 {
+		text-align: center;
+		font-size: 50px;
+		margin-top: 20px;
+	}
+</style>
+
+<div>
+	<h1>大屏导航页</h1>
+	<a href="/BigScreen/TaskScreen" id="task">
+		<img src="~/Web_GlobalResources/Web_Themes/Images/FAST-V1.0/screentask.png" />
+	</a>
+	<a href="/BigScreen/MonitorScreen6" id="monitor">
+		<img src="~/Web_GlobalResources/Web_Themes/Images/FAST-V1.0/screenmonitor.png" />
+	</a>
+	<a href="#" id="monitor6">
+		<img src="~/Web_GlobalResources/Web_Themes/Images/FAST-V1.0/6.png" />
+	</a>
+	<a href="/BigScreen/AlarmScreen" id="alarm">
+		<img src="~/Web_GlobalResources/Web_Themes/Images/FAST-V1.0/screenalarm.png" />
+	</a>
+	<a href="/BigScreen/ReflectorScreen" id="reflector">
+		<img src="~/Web_GlobalResources/Web_Themes/Images/FAST-V1.0/screenreflector.png" />
+	</a>
+	<a href="/BigScreen/FeedScreen" id="feed">
+		<img src="~/Web_GlobalResources/Web_Themes/Images/FAST-V1.0/screenfeed.png" />
+	</a>
+	<a href="/BigScreen/HomeScreen" id="home">
+		<img src="~/Web_GlobalResources/Web_Themes/Images/FAST-V1.0/screenhome.png" />
+	</a>
+</div>

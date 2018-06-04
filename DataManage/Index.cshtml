@@ -1,0 +1,34 @@
+﻿<div class="center-header-container">
+	<div class="center-header-title">
+		<div class="center-header-title-show">静态数据管理</div>
+	</div>
+	<div class="center-header-query">
+		<div class="header-query-search">
+			<label class="header-query-search-label">时间:</label>
+			<input id="txtSTATISTICS_TIME_BEGIN" class="header-query-search-input" type="date" />
+			<input id="txtSTATISTICS_TIME_END" class="header-query-search-input" type="date" />
+			<a class="center-header-button-query" href="javascript:query_button_clicked();"></a>
+		</div>
+		<div class="header-query-function">
+			<a id="btnAdd" class="center-header-button-add" href="javascript:HeaderInsertForm();"></a>
+			<a id="btnExport" class="center-header-button-export" href="javascript:exportGrid();"></a>
+		</div>
+	</div>
+</div>
+<div class="center-grid-basic-border">
+	<div class="center-grid-first-header">
+		<div class="center-grid-first-header-title">静态数据管理</div>
+		<a id="btmCancel" class="button-grid-cancel" href="javascript:void(0);"></a>
+		<a id="btmMinimize" class="button-grid-minimize " href="javascript:ViewMinimumSize();"></a>
+		<a id="btmRefresh" class="button-grid-refresh" href="javascript:void(0);"></a>
+	</div>
+	<div id="grid-container1" class="center-grid-basic-area"></div>
+</div>
+	@*<div class="center-grid-basic-border panel">
+			<div class="center-grid-first-header">
+				<a id="btmCancel" class="button-grid-cancel" href="javascript:GridViewClose();"></a>
+				<a id="btmMinimize" class="button-grid-minimize " href="javascript:ViewMinimumSize();"></a>
+				<a id="btmRefresh" class="button-grid-refresh" href="javascript:HeaderQueryData();"></a>
+			</div>
+			<div id="grid-container1" class="grid-container"></div>
+		</div>*@

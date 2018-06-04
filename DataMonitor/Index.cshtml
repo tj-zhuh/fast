@@ -1,0 +1,338 @@
+﻿
+<style>
+    .data-monitor-contaienr { height: 864px; background-color: #e0e8e8; width: 100%; }
+
+    .data-monitor-contaienr .sequence-name { width: 220px; }
+    .data-monitor-contaienr .task-state { width: 80px; }
+    .data-monitor-contaienr .begin-time { width: 235px; }
+    .data-monitor-contaienr .pass-time { color: #00d600; width:140px;}
+    .data-monitor-contaienr .left-time { color: #f28f00; width:140px;}
+
+    .data-monitor-contaienr .subpanel { position: absolute; }
+    .data-monitor-contaienr .subpanel div { position: absolute; }
+    .data-monitor-contaienr .panel { background-color: #f8f8f8; }
+    .data-monitor-contaienr .panel-top { top: 15px; left: 2%; width: 96%; height: 305px; }
+    .data-monitor-contaienr .subpanel { width: 30%; }
+    .data-monitor-contaienr .panel-left { left: 2%; }
+    .data-monitor-contaienr .panel-middle { left: 35%; }
+    .data-monitor-contaienr .panel-right { left: 68%; }
+    .data-monitor-contaienr .panel-line1 { top: 150px; height: 220px; }
+    .data-monitor-contaienr .panel-line2 { top: 400px; height: 350px; }
+
+    .data-monitor-contaienr .panel-title { top: 16pt; font: bold 16pt "宋体"; color: #4b4b4b; }
+    .data-monitor-contaienr .box-subtitle, .tag-trd, .label, .colon { font: normal 16pt "宋体"; color: #858585; }
+    .data-monitor-contaienr .blue-text, .green-text, .yellow-text { font: normal 16pt "宋体"; }
+    .data-monitor-contaienr .blue-text { color: #009bff; }
+    .data-monitor-contaienr .green-text { color: #00d500; }
+    .data-monitor-contaienr .yellow-text { color: #fd9901; }
+
+    .data-monitor-contaienr .panel-title, .box-subtitle, .box-line { left: 7%; }
+
+    .data-monitor-contaienr .s1245 span { display: inline-block; }
+    .data-monitor-contaienr .s1245 .box-line { width: 93%; }
+    .data-monitor-contaienr .s1245 .box-subtitle { top: 70px; }
+    .data-monitor-contaienr .s1245 .box-line1 { top: 100px; }
+    .data-monitor-contaienr .s1245 .box-line2 { top: 130px; }
+    .data-monitor-contaienr .s1245 .box-line3 { top: 160px; }
+    .data-monitor-contaienr .s1245 .box-subtitle.second-subtitle { top: 210px; }
+    .data-monitor-contaienr .s1245 .box-line4 { top: 240px; }
+    .data-monitor-contaienr .s1245 .box-line5 { top: 270px; }
+    .data-monitor-contaienr .s1245 .box-line6 { top: 300px; }
+    .data-monitor-contaienr .s1245 .tag-trd { width: 5%; }
+    .data-monitor-contaienr .s1245 .label { width: 5%; }
+    .data-monitor-contaienr .s1245 .colon { width: 2%; }
+    .data-monitor-contaienr .s1245 .text1 { width: 30%; }
+    .data-monitor-contaienr .s1245 .text2 { width: 30%; }
+
+    .data-monitor-contaienr #s5 .label { width: 2.5%; }
+    .data-monitor-contaienr #s5 .colon { width: 3.5%; }
+
+    .data-monitor-contaienr .s36 .panel-title, .s36 .line { left: 15%; }
+    .data-monitor-contaienr .s36 .line { position: relative; width:85%; }
+    .data-monitor-contaienr #s3 .line { height: 45px; }
+    .data-monitor-contaienr #s3 .line1 { margin-top: 78px; }
+    .data-monitor-contaienr #s3 .label { width: 40%; display: inline-block; }
+    .data-monitor-contaienr #s3 .dev-text { width: 30%; text-align: right; display: inline-block; }
+
+    .data-monitor-contaienr #s6 .line { height: 43px; }
+    .data-monitor-contaienr #s6 .line1 { margin-top: 80px; }
+</style>
+
+<div class="ctx data-monitor-contaienr">
+
+    <div class="center-header-container" style="background-color: #f8f8f8;">
+        <div class="center-header-title">
+            <div class="center-header-title-show">观测数据监控</div>
+        </div>
+        <div class="center-header-query">
+            <div class="header-query-search">
+                <label class="header-query-search-label">源名 :</label>
+				<div id="sname" class="sequence-name header-query-search-input" style="width:280px;" />
+            </div>
+            <div class="header-query-search">
+                <label class="header-query-search-label">任务状态 :</label>
+                <div id="taskstate" class="task-state header-query-search-input" />
+            </div>
+            <div class="header-query-search">
+                <label class="header-query-search-label">开始时间 :</label>
+                <div id="starttmvalue" class="begin-time header-query-search-input" />
+            </div>
+            <div class="header-query-search">
+                <label class="header-query-search-label">已用时间 :</label>
+                <div id="lasttmvalue" class="pass-time header-query-search-input " />
+            </div>
+            <div class="header-query-search">
+                <label class="header-query-search-label">剩余时间 :</label>
+                <div id="endtmvalue" class="left-time header-query-search-input" />
+            </div>
+        </div>
+    </div>
+
+    <div id="s1" class="s12 s1245 panel subpanel panel-left panel-line1">
+        <div class="panel-title">赤道坐标（Apparent）</div>
+        <div class="box-subtitle">
+            指向
+        </div>
+        <div class="box-line box-line1">
+            <span class="tag-trd">T</span>
+            <span class="label label1">RA</span>
+            <span class="colon colon1">:</span>
+            <span id="appTRA" class="text1 box-text blue-text"></span>
+            <span class="label label2">DEC</span>
+            <span class="colon colon2">:</span>
+            <span id="appTDEC" class="text2 box-text blue-text"></span>
+        </div>
+
+        <div class="box-line box-line2">
+            <span class="tag-trd">R</span>
+            <span class="label label1">RA</span>
+            <span class="colon colon1">:</span>
+            <span id="appRRA" class="text1 box-text blue-text"></span>
+            <span class="label label2">DEC</span>
+            <span class="colon colon2">:</span>
+            <span id="appRDEC" class="text2 box-text blue-text"></span>
+        </div>
+        <div class="box-line box-line3">
+            <span class="tag-trd">D</span>
+            <span class="label label1">RA</span>
+            <span class="colon colon1">:</span>
+            <span id="appDRA" class="text1 box-text green-text"></span>
+            <span class="label label2">DEC</span>
+            <span class="colon colon2">:</span>
+            <span id="appDDEC" class="text2 box-text yellow-text"></span>
+        </div>
+    </div>
+    <div id="s2" class="s12 s1245 panel subpanel panel-middle panel-line1">
+        <div class="panel-title">地平坐标</div>
+        <div class="box-subtitle">
+            指向
+        </div>
+        <div class="box-line box-line1">
+            <span class="tag-trd">T</span>
+            <span class="label label1">AZ</span>
+            <span class="colon colon1">:</span>
+            <span id="dirTAS" class="text1 box-text blue-text"></span>
+            <span class="label label2">EL</span>
+            <span class="colon colon2">:</span>
+            <span id="dirTH" class="text2 box-text blue-text"></span>
+        </div>
+
+        <div class="box-line box-line2">
+            <span class="tag-trd">R</span>
+            <span class="label label1">AZ</span>
+            <span class="colon colon1">:</span>
+            <span id="dirRAS" class="text1 box-text blue-text"></span>
+            <span class="label label2">EL</span>
+            <span class="colon colon2">:</span>
+            <span id="dirRH" class="text2 box-text blue-text"></span>
+        </div>
+        <div class="box-line box-line3">
+            <span class="tag-trd">D</span>
+            <span class="label label1">AZ</span>
+            <span class="colon colon1">:</span>
+            <span id="dirDAS" class="text1 box-text green-text"></span>
+            <span class="label label2">EL</span>
+            <span class="colon colon2">:</span>
+            <span id="dirRH" class="text2 box-text yellow-text"></span>
+
+        </div>
+
+    </div>
+    <div id="s3" class="s36 panel subpanel panel-right panel-line1">
+        <div class="panel-title">偏差</div>
+        <div class="line line1">
+            <span class="label">主光轴偏差</span>
+            <span id="devAxis" class="dev-text blue-text"></span>
+        </div>
+        <div class="line line2">
+            <span class="label">径向偏差</span>
+            <span id="devRadial" class="dev-text blue-text"></span>
+        </div>
+        <div class="line line3">
+            <span class="label">多波束自旋偏差</span>
+            <span id="devMulti" class="dev-text blue-text"></span>
+        </div>
+    </div>
+    <div id="s4" class="s45  s1245 panel subpanel panel-left panel-line2">
+        <div class="panel-title">赤道坐标(J2000)</div>
+        <div class="box-subtitle">
+            指向
+        </div>
+        <div class="box-line box-line1">
+            <span class="tag-trd">T</span>
+            <span class="label label1">RA</span>
+            <span class="colon colon1">:</span>
+            <span id="dirTRA" class="text1 box-text blue-text"></span>
+            <span class="label label2">DEC</span>
+            <span class="colon colon2">:</span>
+            <span id="dirTDEC" class="text2 box-text blue-text"></span>
+        </div>
+        <div class="box-line box-line2">
+            <span class="tag-trd">R</span>
+            <span class="label label1">RA</span>
+            <span class="colon colon1">:</span>
+            <span id="dirRRA" class="text1 box-text blue-text"></span>
+            <span class="label label2">DEC</span>
+            <span class="colon colon2">:</span>
+            <span id="dirRDEC" class="text2 box-text blue-text"></span>
+        </div>
+        <div class="box-line box-line3">
+            <span class="tag-trd">D</span>
+            <span class="label label1">RA</span>
+            <span class="colon colon1">:</span>
+            <span id="dirDRA" class="text1 box-text green-text"></span>
+            <span class="label label2">DEC</span>
+            <span class="colon colon2">:</span>
+            <span id="dirDDEC" class="text2 box-text yellow-text"></span>
+        </div>
+        <div class="box-subtitle second-subtitle">
+            扫描偏移
+        </div>
+        <div class="box-line box-line4">
+            <span class="tag-trd">T</span>
+            <span class="label label1">RA</span>
+            <span class="colon colon1">:</span>
+            <span id="scanTRA" class="text1 box-text blue-text"></span>
+            <span class="label label2">DEC</span>
+            <span class="colon colon2">:</span>
+            <span id="scanTDEC" class="text2 box-text blue-text"></span>
+        </div>
+
+        <div class="box-line box-line5">
+            <span class="tag-trd">R</span>
+            <span class="label label1">RA</span>
+            <span class="colon colon1">:</span>
+            <span id="scanRRA" class="text1 box-text blue-text"></span>
+            <span class="label label2">DEC</span>
+            <span class="colon colon2">:</span>
+            <span id="scanRDEC" class="text2 box-text blue-text"></span>
+        </div>
+        <div class="box-line box-line6">
+            <span class="tag-trd">D</span>
+            <span class="label label1">RA</span>
+            <span class="colon colon1">:</span>
+            <span id="scanDRA" class="text1 box-text green-text"></span>
+            <span class="label label2">DEC</span>
+            <span class="colon colon2">:</span>
+            <span id="scanDDEC" class="text2 box-text yellow-text"></span>
+        </div>
+    </div>
+    <div id="s5" class="s45  s1245 panel subpanel panel-middle panel-line2">
+        <div class="panel-title">银道坐标</div>
+        <div class="box-subtitle">
+            指向
+        </div>
+        <div class="box-line box-line1">
+            <span class="tag-trd">T</span>
+            <span class="label label1">L</span>
+            <span class="colon colon1">:</span>
+            <span id="dirTL" class="text1 box-text blue-text"></span>
+            <span class="label label2">B</span>
+            <span class="colon colon2">:</span>
+            <span id="dirTB" class="text2 box-text blue-text"></span>
+        </div>
+
+        <div class="box-line box-line2">
+            <span class="tag-trd">R</span>
+            <span class="label label1">L</span>
+            <span class="colon colon1">:</span>
+            <span id="dirRL" class="text1 box-text blue-text"></span>
+            <span class="label label2">B</span>
+            <span class="colon colon2">:</span>
+            <span id="dirRB" class="text2 box-text blue-text"></span>
+        </div>
+        <div class="box-line box-line3">
+            <span class="tag-trd">D</span>
+            <span class="label label1">L</span>
+            <span class="colon colon1">:</span>
+            <span id="dirDL" class="text1 box-text green-text"></span>
+            <span class="label label2">B</span>
+            <span class="colon colon2">:</span>
+            <span id="dirDB" class="text2 box-text yellow-text"></span>
+        </div>
+        <div class="box-subtitle  second-subtitle">
+            扫描偏移
+        </div>
+        <div class="box-line box-line4">
+            <span class="tag-trd">T</span>
+            <span class="label label1">L</span>
+            <span class="colon colon1">:</span>
+            <span id="scanTL" class="text1 box-text blue-text"></span>
+            <span class="label label2">B</span>
+            <span class="colon colon2">:</span>
+            <span id="scanTB" class="text2 box-text blue-text"></span>
+        </div>
+
+        <div class="box-line box-line5">
+            <span class="tag-trd">R</span>
+            <span class="label label1">L</span>
+            <span class="colon colon1">:</span>
+            <span id="scanRL" class="text1 box-text blue-text"></span>
+            <span class="label label2">B</span>
+            <span class="colon colon2">:</span>
+            <span id="scanRB" class="text2 box-text blue-text"></span>
+        </div>
+        <div class="box-line box-line6">
+            <span class="tag-trd">D</span>
+            <span class="label label1">L</span>
+            <span class="colon colon1">:</span>
+            <span id="scanDL" class="text1 box-text green-text"></span>
+            <span class="label label2">B</span>
+            <span class="colon colon2">:</span>
+            <span id="scanDB" class="text2 box-text yellow-text"></span>
+        </div>
+    </div>
+    <div id="s6" class="s36 panel subpanel panel-right panel-line2">
+        <div class="panel-title">时间</div>
+        <div class="line line1">
+            <span class="label">日期</span>
+            <span class="colon">:</span>
+            <span id="curDate" class="blue-text"></span>
+        </div>
+        <div class="line line2">
+            <span class="label">本地时</span>
+            <span class="colon">:</span>
+            <span id="curTime" class="time-text blue-text"></span>
+        </div>
+        <div class="line line3">
+            <span class="label">世界时</span>
+            <span class="colon">:</span>
+            <span id="curUT" class="time-text blue-text"></span>
+        </div>
+        <div class="line line4">
+			<span class="label">原子时</span>
+			<span class="colon">:</span>
+			<span id="curAtmoictime" class="time-text blue-text"></span>
+        </div>
+        <div class="line line5">
+			<span class="label">恒星时</span>
+			<span class="colon">:</span>
+			<span id="curStartime" class="time-text blue-text"></span>
+        </div>
+        <div class="line line6">
+            <span class="label">儒略日</span>
+            <span class="colon">:</span>
+			<span id="curMJD" class="time-text blue-text"></span>
+        </div>
+    </div>
+</div>
