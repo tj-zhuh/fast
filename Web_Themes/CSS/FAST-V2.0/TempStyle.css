@@ -1,0 +1,973 @@
+﻿/* 部分页面引用该CSS文件，具体包括
+	观测任务选择
+	干扰源管理
+	观测数据监控
+	反射面
+	馈源支撑
+	静态数据管理
+	文件管理
+	主页
+	聊天
+	系统参数管理
+ */
+
+.ctx * {
+	background-color: transparent;
+}
+
+.ctx div.x-mask {
+	background-color: #f9f9f9;
+}
+
+.ctx .panel {
+	background-color: #f9f9f9;
+}
+
+.ctx .topbar {
+	background-color: #f8f8f8;
+}
+
+.ctx .header-query-search-input {
+	background-color: #f8f8f8;
+	padding-left: 6px;
+	height: 32px;
+	border: 1px #ebebeb solid;
+	color: #545454;
+	font-size: 16pt;
+	font-family: '黑体';
+}
+
+.ctx .header-query-search-label {
+	margin-right: 2px;
+}
+
+.ctx .header-query-search {
+	line-height: 29px;
+}
+
+/*.ctx input::-webkit-input-placeholder {
+	color: #545454;
+}
+
+.ctx input:-moz-placeholder {
+	color: #545454;
+}
+
+.ctx input::-moz-placeholder {
+	color: #545454;
+}
+
+.ctx input:-ms-input-placeholder {
+	color: #545454;
+}*/
+
+.ctx div.x-panel-body-default {
+	background-color: #f9f9f9;
+}
+
+.ctx .x-panel-body-default * {
+	background-color: #f9f9f9;
+}
+
+.ctx tr.x-grid-row-focused {
+	background-color: #f9f9f9;
+}
+
+	.ctx tr.x-grid-row-focused * {
+		background-color: #f9f9f9;
+	}
+
+.ctx .x-grid-header-ct {
+	border-color: #f9f9f9;
+	background-color: #f9f9f9;
+}
+
+.ctx .x-column-header {
+	border-color: #f9f9f9;
+	background-color: #f9f9f9;
+}
+
+.ctx .x-column-header-inner {
+	border-color: #f9f9f9;
+	background-color: #f9f9f9;
+}
+
+.ctx .x-column-header-text {
+	border-color: #f9f9f9;
+	background-color: #f9f9f9;
+}
+
+.ctx .x-toolbar-default {
+	border-color: #f9f9f9;
+	background-color: #f9f9f9;
+}
+
+.ctx .x-grid-body {
+	border: none;
+}
+
+.ctx .x-grid-row-checker {
+	background: url(../../Images/FAST-V2.0/checkbox.png) 0 0;
+	height: 19px;
+	width: 19px;
+	margin-top: 14px;
+}
+
+.ctx .x-grid-row-selected .x-grid-row-checker {
+	background-image: url(../../Images/FAST-V2.0/checkbox-select.png);
+}
+
+.ctx .main-panel {
+	width: 97%;
+	margin: 25px 0 0 25px;
+	position: relative;
+	float: left;
+	background-color: #f8f8f8;
+}
+
+.ctx .center-grid-first-header {
+	background-color: #f9f9f9;
+}
+
+/* 观测任务选择 */
+.task-queue-contaienr .main-panel .panel-body {
+	height: 675px;
+}
+
+.task-queue-contaienr .center-sub {
+	float: left;
+	height: 100%;
+	position: relative;
+}
+
+.task-queue-contaienr .center-grid {
+	float: left;
+	margin-left: 4%;
+	margin-top: 25px;
+	height: 595px;
+	width: 92%;
+	background-color: #f9f9f9;
+	position: relative;
+}
+
+.task-queue-contaienr .center-grid-left {
+	width: 47%;
+}
+
+.task-queue-contaienr .center-grid-middle {
+	width: 3%;
+	background-color: #e0e8e8;
+}
+
+.task-queue-contaienr .center-grid-right {
+	width: 47%;
+}
+
+.task-queue-contaienr .center-grid-more-right {
+	width: 3%;
+	background-color: #e0e8e8;
+}
+
+.task-queue-contaienr .arrow-button {
+	width: 51px;
+	height: 51px;
+	margin-left: -3px;
+}
+
+.task-queue-contaienr .grid-first-button {
+	width: 29px;
+	height: 29px;
+	background: url(../../Images/FAST-V2.0/grid-first-button.png) 0 0;
+	cursor: pointer;
+}
+
+.task-queue-contaienr .grid-preview-button {
+	width: 29px;
+	height: 29px;
+	background: url(../../Images/FAST-V2.0/grid-preview-button.png) 0 0;
+	cursor: pointer;
+}
+
+.task-queue-contaienr .grid-next-button {
+	width: 29px;
+	height: 29px;
+	background: url(../../Images/FAST-V2.0/grid-next-button.png) 0 0;
+	cursor: pointer;
+}
+
+.task-queue-contaienr .grid-last-button {
+	width: 29px;
+	height: 29px;
+	background: url(../../Images/FAST-V2.0/grid-last-button.png) 0 0;
+	cursor: pointer;
+}
+
+.task-queue-contaienr #btmMoveTop {
+	position: relative;
+	top: 185px;
+}
+
+.task-queue-contaienr #btmMoveUp {
+	position: relative;
+	top: 210px;
+}
+
+.task-queue-contaienr #btmMoveDown {
+	position: relative;
+	top: 235px;
+}
+
+.task-queue-contaienr #btmMoveBottom {
+	position: relative;
+	top: 260px;
+}
+
+.task-queue-contaienr #button-to-right {
+	position: relative;
+	top: 200px;
+}
+
+.task-queue-contaienr #button-to-left {
+	position: relative;
+	top: 250px;
+}
+
+.task-queue-contaienr #grid-container1 .x-grid-row:last-child .x-grid-cell {
+	border-bottom: none;
+}
+
+.task-queue-contaienr #grid-container2 .x-grid-row:last-child .x-grid-cell {
+	border-bottom: none;
+}
+
+#button-to-right {
+	background: url(../../Images/FAST-V2.0/button-to-right.png) 0 0;
+	cursor: pointer;
+}
+
+	#button-to-right:active {
+		background: url(../../Images/FAST-V2.0/button-to-right-active.png) 0 0;
+	}
+
+#button-to-left {
+	background: url(../../Images/FAST-V2.0/button-to-left.png) 0 0;
+	cursor: pointer;
+}
+
+	#button-to-left:active {
+		background: url(../../Images/FAST-V2.0/button-to-left-active.png) 0 0;
+	}
+
+/* 静态数据管理 */
+
+.system-statistics-container {
+	background-color: transparent;
+	height: 846px;
+	position: absolute;
+	width: 100%;
+}
+
+	.system-statistics-container .grid-container .x-grid-row:last-child .x-grid-cell {
+		border-bottom: none;
+	}
+
+	.system-statistics-container .grid-container {
+		width: 94%;
+		margin-left: 3%;
+		height: 600px;
+	}
+
+	.system-statistics-container .center-header-button-import {
+		float: right;
+		margin-right: 50px;
+	}
+
+	.system-statistics-container .center-header-button-export {
+		margin-top: 7px;
+	}
+
+/* 文件管理 */
+
+.document-container {
+	background-color: transparent;
+	height: 846px;
+	position: absolute;
+	width: 100%;
+}
+
+	.document-container .grid-container .x-grid-row:last-child .x-grid-cell {
+		border-bottom: none;
+	}
+
+	.document-container .grid-container {
+		width: 94%;
+		margin-left: 3%;
+		height: 600px;
+	}
+
+	.document-container .center-header-button-import {
+		float: right;
+		margin-right: 50px;
+	}
+
+	.document-container .center-header-button-export {
+		margin-top: 7px;
+	}
+
+/* 系统参数管理 */
+.system-config-container .button-submit {
+	background: url(../../Images/FAST-V2.0/button-save-default.png) 0 0;
+	width: 102px;
+	height: 39px;
+	margin-left: 45%;
+}
+
+	.system-config-container .button-submit:active {
+		background: url(../../Images/FAST-V2.0/button-save-active.png) 0 0;
+	}
+
+/* 主页 */
+.container-observer-home {
+	height: 864px;
+	background-color: #dbe0e1;
+	width: 100%;
+}
+
+	.container-observer-home div {
+		position: absolute;
+	}
+
+	.container-observer-home .panel {
+		background-color: #f8f8f8;
+	}
+
+	.container-observer-home .panel-top {
+		top: 10px;
+		left: 2%;
+		width: 96%;
+		height: 235px;
+	}
+
+	.container-observer-home .subpanel {
+		width: 47%;
+		height: 140px;
+	}
+
+	.container-observer-home .panel-left {
+		left: 2%;
+	}
+
+	.container-observer-home .panel-right {
+		right: 2%;
+	}
+
+	.container-observer-home .panel-line1 {
+		top: 255px;
+	}
+
+	.container-observer-home .panel-line2 {
+		top: 405px;
+	}
+
+	.container-observer-home .panel-line3 {
+		top: 555px;
+	}
+
+	.container-observer-home .panel-line4 {
+		top: 705px;
+	}
+
+	.container-observer-home .panel-title {
+		top: 24px;
+		left: 26px;
+		font-size: 16pt;
+		font-family: "黑体";
+		color: #4b4b4b;
+	}
+
+	.container-observer-home .ball {
+		width: 166px;
+		height: 166px;
+		top: 50px;
+	}
+
+	.container-observer-home #ball1 {
+		left: 5%;
+	}
+
+	.container-observer-home #ball2 {
+		left: 20%;
+	}
+
+	.container-observer-home #ball3 {
+		left: 35%;
+	}
+
+	.container-observer-home #control-num {
+		font-family: Arial;
+		color: #71baeb;
+		font-size: 50px;
+		top: 45px;
+		left: 45px;
+	}
+
+	.container-observer-home #task-state-box {
+		font-family: '黑体';
+		font-weight: bold;
+		color: #4b4b4b;
+		height: 30px;
+		line-height: 30px;
+		text-align: center;
+	}
+
+	.container-observer-home #taskState {
+		color: #d0cb25;
+	}
+
+	.container-observer-home .top-right-bar {
+		right: 6%;
+	}
+
+	.container-observer-home .observe-bar {
+		width: 500px;
+		height: 70px;
+	}
+
+	.container-observer-home .observe-time {
+		top: 85px;
+	}
+
+	.container-observer-home .observe-sequence {
+		top: 145px;
+	}
+
+	.container-observer-home .observe-bar .title {
+		top: 0px;
+		left: 0;
+		width: 100%;
+		height: 30px;
+		line-height: 30px;
+		text-align: left;
+		color: #4b4b4b;
+		font-family: "黑体";
+		font-size: 16px;
+	}
+
+	.container-observer-home .observe-bar .taskbar {
+		top: 30px;
+		left: 0;
+		text-align: right;
+		padding-right: 10px;
+		padding-left: 10px;
+		height: 20px;
+		line-height: 20px;
+	}
+
+	.container-observer-home .observe-bar .complete {
+		background-color: #30c998;
+		z-index: 1;
+		white-space: nowrap;
+	}
+
+	.container-observer-home .observe-bar .total {
+		background-color: #70b9dd;
+		width: 480px;
+	}
+
+	.container-observer-home .icon {
+		bottom: 18px;
+		width: 75px;
+		height: 75px;
+	}
+
+	.container-observer-home .wifi {
+		left: 2%;
+	}
+
+	.container-observer-home .taskbar span {
+		background-color: transparent;
+	}
+
+	.container-observer-home .panel-top .mode.debugall {
+		background: url(../../Images/FAST-V2.0/ball-mode-debug-all.png) 0 0;
+	}
+
+	.container-observer-home .panel-top .mode.initial {
+		background: url(../../Images/FAST-V2.0/ball-mode-initial.png) 0 0;
+	}
+
+	.container-observer-home .panel-top .mode.debug {
+		background: url(../../Images/FAST-V2.0/ball-mode-debug.png) 0 0;
+	}
+
+	.container-observer-home .panel-top .mode.error {
+		background: url(../../Images/FAST-V2.0/ball-mode-error.png) 0 0;
+	}
+
+	.container-observer-home .panel-top .mode.run {
+		background: url(../../Images/FAST-V2.0/ball-mode-observe.png) 0 0;
+	}
+
+	.container-observer-home .panel-top .mode.prepare {
+		background: url(../../Images/FAST-V2.0/ball-mode-prepare.png) 0 0;
+	}
+
+	.container-observer-home .panel-top .mode.wait {
+		background: url(../../Images/FAST-V2.0/ball-mode-wait.png) 0 0;
+	}
+
+	.container-observer-home .panel-top .state.error {
+		background: url(../../Images/FAST-V2.0/ball-state-error.png) 0 0;
+	}
+
+	.container-observer-home .panel-top .state.initial {
+		background: url(../../Images/FAST-V2.0/ball-state-initial.png) 0 0;
+	}
+
+	.container-observer-home .panel-top .state.normal {
+		background: url(../../Images/FAST-V2.0/ball-state-normal.png) 0 0;
+	}
+
+	.container-observer-home .panel-top .state.run-with-error {
+		background: url(../../Images/FAST-V2.0/ball-state-run-with-error.png) 0 0;
+	}
+
+	.container-observer-home .panel-top .state.run {
+		background: url(../../Images/FAST-V2.0/ball-state-run.png) 0 0;
+	}
+
+	.container-observer-home .panel-top #ball3 {
+		background: url(../../Images/FAST-V2.0/ball-control.png) 0 0;
+	}
+
+	.container-observer-home .subpanel .mode.initial {
+		background: url(../../Images/FAST-V2.0/text-mode-initial.png) 0 0;
+	}
+
+	.container-observer-home .subpanel .mode.initial-gray {
+		background: url(../../Images/FAST-V2.0/text-mode-initial-gray.png) 0 0;
+	}
+
+	.container-observer-home .subpanel .mode.debug-all {
+		background: url(../../Images/FAST-V2.0/text-mode-debug-all.png) 0 0;
+	}
+
+	.container-observer-home .subpanel .mode.debug-all-gray {
+		background: url(../../Images/FAST-V2.0/text-mode-debug-all-gray.png) 0 0;
+	}
+
+	.container-observer-home .subpanel .mode.debug {
+		background: url(../../Images/FAST-V2.0/text-mode-debug.png) 0 0;
+	}
+
+	.container-observer-home .subpanel .mode.debug-gray {
+		background: url(../../Images/FAST-V2.0/text-mode-debug-gray.png) 0 0;
+	}
+
+	.container-observer-home .subpanel .mode.error {
+		background: url(../../Images/FAST-V2.0/text-mode-error.png) 0 0;
+	}
+
+	.container-observer-home .subpanel .mode.error-gray {
+		background: url(../../Images/FAST-V2.0/text-mode-error-gray.png) 0 0;
+	}
+
+	.container-observer-home .subpanel .mode.run {
+		background: url(../../Images/FAST-V2.0/text-mode-observe.png) 0 0;
+	}
+
+	.container-observer-home .subpanel .mode.run-gray {
+		background: url(../../Images/FAST-V2.0/text-mode-observe-gray.png) 0 0;
+	}
+
+	.container-observer-home .subpanel .mode.prepare {
+		background: url(../../Images/FAST-V2.0/text-mode-prepare.png) 0 0;
+	}
+
+	.container-observer-home .subpanel .mode.prepare-gray {
+		background: url(../../Images/FAST-V2.0/text-mode-prepare-gray.png) 0 0;
+	}
+
+	.container-observer-home .subpanel .mode.wait {
+		background: url(../../Images/FAST-V2.0/text-mode-wait.png) 0 0;
+	}
+
+	.container-observer-home .subpanel .mode.wait-gray {
+		background: url(../../Images/FAST-V2.0/text-mode-wait-gray.png) 0 0;
+	}
+
+	.container-observer-home .subpanel .state.error {
+		background: url(../../Images/FAST-V2.0/text-state-error.png) 0 0;
+	}
+
+	.container-observer-home .subpanel .state.error-gray {
+		background: url(../../Images/FAST-V2.0/text-state-error-gray.png) 0 0;
+	}
+
+	.container-observer-home .subpanel .state.initial {
+		background: url(../../Images/FAST-V2.0/text-state-initial.png) 0 0;
+	}
+
+	.container-observer-home .subpanel .state.normal {
+		background: url(../../Images/FAST-V2.0/text-state-normal.png) 0 0;
+	}
+	.container-observer-home .subpanel .state.normal-gray {
+		background: url(../../Images/FAST-V2.0/text-state-normal-gray.png) 0 0;
+	}
+
+	.container-observer-home .subpanel .state.run-with-error {
+		background: url(../../Images/FAST-V2.0/text-state-run-with-error.png) 0 0;
+	}
+
+	.container-observer-home .subpanel .state.run {
+		background: url(../../Images/FAST-V2.0/text-state-run.png) 0 0;
+	}
+
+	.container-observer-home .subpanel .state.run-gray {
+		background: url(../../Images/FAST-V2.0/text-state-run-gray.png) 0 0;
+	}
+
+	.container-observer-home .subpanel .wifi.green {
+		background: url(../../Images/FAST-V2.0/wifi-green.png) 0 0;
+	}
+
+	.container-observer-home .subpanel .wifi.gray {
+		background: url(../../Images/FAST-V2.0/wifi-grey.png) 0 0;
+	}
+
+	.container-observer-home .subpanel .wifi.red {
+		background: url(../../Images/FAST-V2.0/wifi-red.png) 0 0;
+	}
+
+	.container-observer-home .subpanel .author.green {
+		background: url(../../Images/FAST-V2.0/author-green.png) 0 0;
+	}
+
+	.container-observer-home .subpanel .author.gray {
+		background: url(../../Images/FAST-V2.0/author-grey.png) 0 0;
+	}
+
+	.container-observer-home .subpanel .author.red {
+		background: url(../../Images/FAST-V2.0/author-red.png) 0 0;
+	}
+
+	.container-observer-home .subpanel .control.hold {
+		background: url(../../Images/FAST-V2.0/control-hold.png) 0 0;
+	}
+
+		.container-observer-home .subpanel .control.hold:active {
+			background: url(../../Images/FAST-V2.0/control-hold-focus.png) 0 0;
+		}
+
+	.container-observer-home .subpanel .control.release {
+		background: url(../../Images/FAST-V2.0/control-release.png) 0 0;
+	}
+
+		.container-observer-home .subpanel .control.release:active {
+			background: url(../../Images/FAST-V2.0/control-release-focus.png) 0 0;
+		}
+
+	.container-observer-home .subpanel .control.holding {
+		background: url(../../Images/FAST-V2.0/control-holding.gif) 0 0;
+	}
+
+	.container-observer-home .subpanel .control.releasing {
+		background: url(../../Images/FAST-V2.0/control-releasing.gif) 0 0;
+	}
+
+	.container-observer-home #task-state-box {
+		background: url(../../Images/FAST-V2.0/task-state-bg.png) 0 0;
+		width: 120px;
+		height: 30px;
+		top: 30px;
+	}
+
+.task-disturb-contaienr .gridcheckbox {
+	background: url(../../Images/FAST-V2.0/checkbox.png) 0 0;
+	height: 19px;
+	width: 19px;
+	position: relative;
+	left: 45%;
+	top: 16px;
+}
+
+	.task-disturb-contaienr .gridcheckbox.selected {
+		background: url(../../Images/FAST-V2.0/checkbox-select.png) 0 0;
+	}
+
+/* 聊天 */
+.chat-icon {
+	position: fixed;
+	z-index: 1;
+	right: 0px;
+	bottom: -40px;
+	width: 70px;
+	height: 70px;
+	cursor: pointer;
+	background: url(../../Images/FAST-V2.0/chat-icon.png) 0 0;
+}
+
+	.chat-icon:hover {
+		background: url(../../Images/FAST-V2.0/chat-icon-hover.png) 0 0;
+	}
+
+	.chat-icon.unread {
+		background: url(../../Images/FAST-V2.0/chat-icon-unread.png) 0 0;
+	}
+
+		.chat-icon.unread:hover {
+			background: url(../../Images/FAST-V2.0/chat-icon-unread-hover.png) 0 0;
+		}
+
+.overlay {
+	position: fixed;
+	z-index: 100;
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	width: 100%;
+	background: #000;
+	display: none;
+}
+
+.chat-panel {
+	z-index: 101;
+	width: 635px;
+	height: 880px;
+	background-color: #f3f6fa;
+	display: block;
+	position: fixed;
+	left: 50%;
+	margin-left: -317px;
+	top: 50px;
+	display: none;
+	background: url(../../Images/FAST-V2.0/chat-bg.png) 0 0;
+	overflow: hidden;
+}
+
+.chat-close {
+	z-index: 101;
+	width: 38px;
+	height: 39px;
+	display: block;
+	position: fixed;
+	left: 50%;
+	top: 50px;
+	margin-left: 317px;
+	display: none;
+	background: url(../../Images/FAST-V2.0/chat-close.png) 0 0;
+}
+
+	.chat-close:hover {
+		background: url(../../Images/FAST-V2.0/chat-close-hover.png) 0 0;
+	}
+
+.online-users {
+	height: 288px;
+	margin: 0 29px 0 47px;
+	background-color: #f9f9f9;
+	display: none;
+	overflow: auto;
+}
+
+.chat-user {
+	width: 67px;
+	height: 100px;
+	float: left;
+	margin: 30px 20px 0px 20px;
+}
+
+	.chat-user .photo {
+		width: 67px;
+		height: 59px;
+		padding-top: 8px;
+		line-height: 59px;
+		text-align: center;
+		font: normal 30pt 'Microsoft YaHei';
+		background: url(../../Images/FAST-V2.0/chat-photo-bg.png) 0 0 no-repeat;
+		color: #b0b0b0;
+	}
+
+	.chat-user .user-name {
+		width: 67px;
+		height: 33px;
+		text-align: center;
+		font: normal 16pt 'Microsoft YaHei';
+		color: #414141;
+	}
+
+.toggle {
+	height: 19px;
+	clear: both;
+	background-color: #f9f9f9;
+	margin-left: 47px;
+	margin-right: 29px;
+}
+
+.toggle-icon {
+	margin: 0 auto;
+	overflow: hidden;
+	width: 18px;
+	height: 19px;
+	cursor: pointer;
+}
+
+	.toggle-icon.go-up {
+		background: url(../../Images/FAST-V2.0/chat-up.png) 0 0;
+	}
+
+	.toggle-icon.go-down {
+		background: url(../../Images/FAST-V2.0/chat-down.png) 0 0;
+	}
+
+.chat-body {
+	height: 717px;
+	overflow-y: auto;
+	background-color: #f8f8f8;
+	border: 1px solid #e3e3e3;
+	box-shadow: #e3e3e3 0px 1px inset;
+	margin-left: 47px;
+	margin-right: 29px;
+}
+
+.chat-bottom {
+	position: absolute;
+	left: 47px;
+	right: 32px;
+	bottom: 56px;
+	height: 56px;
+}
+
+	.chat-bottom .input-panel {
+		background: url(../../Images/FAST-V2.0/chat-input.png) 0 0;
+		width: 470px;
+		height: 45px;
+		top: 10px;
+		left: 5px;
+		position: absolute;
+	}
+
+	.chat-bottom input {
+		padding: 0 10px;
+		font: normal 16pt 'Microsoft YaHei';
+		color: #000;
+		width: 450px;
+		height: 100%;
+		line-height: 45px;
+		border: none;
+		background-color: transparent;
+	}
+
+	.chat-bottom .send-button {
+		width: 70px;
+		height: 46px;
+		background: url(../../Images/FAST-V2.0/chat-send.png) 0 0;
+		left: 480px;
+		top: 9px;
+		position: absolute;
+		cursor: pointer;
+	}
+
+		.chat-bottom .send-button:hover {
+			background: url(../../Images/FAST-V2.0/chat-send-hover.png) 0 0;
+		}
+
+.chat-top {
+	height: 735px;
+	overflow: hidden;
+}
+/*.chat-time { width: 210px; height: 26px; line-height: 26px; font: normal 14pt 'Microsoft YaHei'; margin: 0 auto; background: #cdcdcd; margin-top: 10px; padding-left: 13px; border-radius: 5px; }*/
+
+.chat-time {
+	margin: 7px 0;
+	text-align: center;
+}
+
+	.chat-time span {
+		display: inline-block;
+		padding: 3px 18px;
+		color: #f9f9f9;
+		border-radius: 2px;
+		background-color: #cdcdcd;
+		font: normal 14pt 'Microsoft YaHei';
+	}
+
+.chat-item {
+	position: relative;
+	overflow: hidden;
+	margin-top: 10px;
+}
+
+	.chat-item .speaker {
+		width: 67px;
+		height: 100px;
+		float: left;
+		margin: 0 20px;
+	}
+
+	.chat-item .photo {
+		width: 67px;
+		height: 59px;
+		padding-top: 8px;
+		line-height: 59px;
+		text-align: center;
+		font: normal 30pt 'Microsoft YaHei';
+		background: url(../../Images/FAST-V2.0/chat-photo-bg.png) 0 0;
+		color: #b0b0b0;
+	}
+
+	.chat-item .user-name {
+		width: 67px;
+		height: 33px;
+		text-align: center;
+		font: normal 16pt 'Microsoft YaHei';
+		color: #414141;
+	}
+
+	.chat-item .text {
+		float: left;
+		color: #000;
+		display: inline-block;
+		position: relative;
+		margin-top: 7px;
+		padding: 10px 10px;
+		max-width: 300px;
+		min-height: 30px;
+		line-height: 2.5;
+		font: normal 16pt 'Microsoft YaHei';
+		text-align: left;
+		word-break: break-all;
+		background-color: #9fceeb;
+		border-radius: 4px;
+	}
+
+	.chat-item.other .text::before {
+		content: " ";
+		position: absolute;
+		top: 9px;
+		right: 100%;
+		border: 6px solid transparent;
+		border-right-color: #9fceeb;
+	}
+
+	.chat-item.self .user-name {
+		margin-right: 10px;
+	}
+
+	.chat-item.self .speaker {
+		float: right;
+	}
+
+	.chat-item.self .text {
+		float: right;
+		background-color: #c6f5ba;
+	}
+
+		.chat-item.self .text::after {
+			content: " ";
+			position: absolute;
+			top: 9px;
+			left: 100%;
+			border: 6px solid transparent;
+			border-left-color: #c6f5ba;
+		}

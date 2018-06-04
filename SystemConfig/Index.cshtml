@@ -1,0 +1,127 @@
+﻿<style>
+	.system-config-container {
+		background-color: transparent;
+		height: 846px;
+		position: absolute;
+		width: 100%;
+	}
+
+		.system-config-container .main-panel {
+			height: 700px;
+		}
+
+		.system-config-container .label {
+			font: normal 16pt "黑体";
+			color: #565656;
+			height: 35px;
+			line-height: 35px;
+			width: 20%;
+			margin-left: 25%;
+			display: inline-block;
+			text-align: right;
+		}
+
+		.system-config-container input {
+			width: 212px;
+			height: 35px;
+			line-height: 35px;
+			border: 1px solid #e2e2e2;
+			background-color: #fafafa;
+			font: normal 16pt "黑体";
+			padding-left: 5px;
+		}
+
+		.system-config-container .line-group {
+			margin-top: 18px;
+		}
+
+		.system-config-container .first-line-group {
+			margin-top: 36px;
+		}
+
+		.system-config-container hr {
+			margin: 0 35%;
+			border: 1px dotted #d2d2d2;
+		}
+
+		.system-config-container .line {
+			margin-bottom: 18px;
+		}
+</style>
+
+<div class="ctx system-config-container">
+	<div class="center-header-container" style="background-color:#f8f8f8;">
+		<div class="center-header-title">
+			<div class="center-header-title-show">系统参数管理</div>
+		</div>
+		<div class="center-header-query">
+			<div class="header-query-function">
+				<a class="center-header-button-import" href="javascript:upload_button_clicked();"></a>
+			</div>
+		</div>
+	</div>
+	<div class="panel main-panel">
+		<div class="panel-body">
+			<form id="form1">
+				<div class="line-group first-line-group">
+					<input type="hidden" id="CONSTANT_ID" name="CONSTANT_ID" />
+					<div class="line">
+						<span class="label">气温(℃)</span>
+						<input type="text" id="WEATHER_LOCALTEMP" name="WEATHER_LOCALTEMP" />
+					</div>
+					<div class="line">
+						<span class="label">气压(kPa)</span>
+						<input type="text" id="WEATHER_LOCALPRESSURE" name="WEATHER_LOCALPRESSURE" />
+					</div>
+					<div class="line">
+						<span class="label">湿度(%)</span>
+						<input type="text" id="WEATHER_LOCALHUMIDITY" name="WEATHER_LOCALHUMIDITY" />
+					</div>
+					<div class="line">
+						<span class="label">观测波长(μm)</span>
+						<input type="text" id="OBSERVATION_WAVE" name="OBSERVATION_WAVE" />
+					</div>
+				</div>
+				<hr />
+				<div class="line-group">
+					<div class="line">
+						<span class="label">大窝凼地理经度</span>
+						<input type="text" style="width:60px" id="CONSTANT_LONGITUDE0" name="CONSTANT_LONGITUDE0" />
+						<span style="font: normal 16px 黑体; color: #565656; height: 35px; line-height: 35px; display: inline-block; text-align: right;">°</span>
+						<input type="text" style="width:60px" id="CONSTANT_LONGITUDE1" name="CONSTANT_LONGITUDE1" />
+						<span style="font: normal 16px 黑体; color: #565656; height: 35px; line-height: 35px; display: inline-block; text-align: right;">′</span>
+						<input type="text" style="width:100px" id="CONSTANT_LONGITUDE2" name="CONSTANT_LONGITUDE2" />
+						<span style="font: normal 16px 黑体; color: #565656; height: 35px; line-height: 35px; display: inline-block; text-align: right;">″</span>
+					</div>
+					<div class="line">
+						<span class="label">大窝凼地理纬度</span>
+						<input type="text" style="width:60px" id="CONSTANT_LATITUDE0" name="CONSTANT_LATITUDE0" />
+						<span style="font: normal 16px 黑体; color: #565656; height: 35px; line-height: 35px; display: inline-block; text-align: right;">°</span>
+						<input type="text" style="width:60px" id="CONSTANT_LATITUDE1" name="CONSTANT_LATITUDE1" />
+						<span style="font: normal 16px 黑体; color: #565656; height: 35px; line-height: 35px; display: inline-block; text-align: right;">′</span>
+						<input type="text" style="width:100px" id="CONSTANT_LATITUDE2" name="CONSTANT_LATITUDE2" />
+						<span style="font: normal 16px 黑体; color: #565656; height: 35px; line-height: 35px; display: inline-block; text-align: right;">″</span>
+					</div>
+					<div class="line">
+						<span class="label">望远镜高度(m)</span>
+						<input type="text" id="TELESCOPE_HIGH" name="TELESCOPE_HIGH" />
+					</div>
+				</div>
+				<hr />
+				<div class="line-group">
+					<div class="line">
+						<span class="label">沿赤经扫描速度(arcsec/s)</span>
+						<input type="text" id="LONGITUDE_SPEED" name="LONGITUDE_SPEED" />
+					</div>
+					<div class="line">
+						<span class="label">沿赤纬扫描速度(arcsec/s)</span>
+						<input type="text" id="LATITUDE_SPEED" name="LATITUDE_SPEED" />
+					</div>
+				</div>
+				<div class="button-line">
+					<div class="button button-submit"></div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

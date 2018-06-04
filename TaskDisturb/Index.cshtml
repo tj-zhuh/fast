@@ -1,0 +1,199 @@
+﻿<link href="~/Web_GlobalResources/Web_Themes/CSS/FAST-V2.0/TempStyle.css" rel="stylesheet" />
+<style>
+    .task-disturb-contaienr { background-color: #dbe0e1; }
+	.task-disturb-contaienr .v-center-grid-basic-border {
+		width: 97%;
+		background-color: #f9f9f9;
+	}
+	.task-disturb-contaienr .center-grid-first-header {
+		background-color: #f9f9f9;
+	}
+
+	.task-disturb-contaienr div.x-panel-body-default, .x-panel-body-default *, tr.x-grid-row-focused, tr.x-grid-row-focused * {
+		background-color: #f9f9f9;
+	}
+	.task-disturb-contaienr .x-grid-header-ct, .x-column-header, .x-column-header-inner, .x-column-header-text, .x-toolbar-default {
+		border-color: #f9f9f9;
+		background-color: #f9f9f9;
+	}
+    .task-disturb-contaienr .x-grid-body { border: none; }
+    .task-disturb-contaienr .grid-container .x-grid-row:last-child .x-grid-cell { border-bottom: none; }
+
+	.task-disturb-contaienr .grid-container {
+		width: 94%;
+		margin-left: 3%;
+		position: relative;
+		float: left;
+		margin-top: 25px;
+		margin-left: 25px;
+		margin-right: 25px;
+	}
+    .task-disturb-contaienr #grid-container1 { height: 350px; }
+    .task-disturb-contaienr #grid-container2 { height: 465px; }
+    .task-disturb-contaienr #grid-container3 { height: 710px; }
+    .task-disturb-contaienr #grid-container4 { height: 110px; }
+    .task-disturb-contaienr #grid-container5 { height: 400px; }
+    .task-disturb-contaienr #grid-container6 { height: 220px; }
+
+    .task-disturb-contaienr .blue-text { color: #77aacb; }
+</style>
+
+<div class="ctx task-disturb-contaienr">
+
+    <div class="center-header-container" style="background-color: #f8f8f8;">
+        <div class="center-header-title">
+            <div class="center-header-title-show">干扰源管理</div>
+        </div>
+        <div class="center-header-query">
+            <div class="header-query-search">
+                <a id="btnDisturb" class="center-header-button-disturb" href="javascript:void(0);"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="v-center-grid-basic-border" id="s1">
+        <div class="center-grid-first-header">
+            <div class="center-grid-first-header-title">反射面系统</div>
+            <a class="button-grid-cancel" href="javascript:void(0);"></a>
+            <a class="button-grid-minimize " href="javascript:void(0);"></a>
+            <a class="button-grid-refresh" href="javascript:void(0);"></a>
+        </div>
+        <div id="grid-container1" class="grid-container"></div>
+    </div>
+
+
+    <div class="v-center-grid-basic-border" id="s2">
+        <div class="center-grid-first-header">
+            <div class="center-grid-first-header-title">馈源支撑系统</div>
+            <a class="button-grid-cancel" href="javascript:void(0);"></a>
+            <a class="button-grid-minimize " href="javascript:void(0);"></a>
+            <a class="button-grid-refresh" href="javascript:void(0);"></a>
+        </div>
+        <div id="grid-container2" class="grid-container"></div>
+    </div>
+
+    <div class="v-center-grid-basic-border" id="s3">
+        <div class="center-grid-first-header">
+            <div class="center-grid-first-header-title">测量与控制系统</div>
+            <a class="button-grid-cancel" href="javascript:void(0);"></a>
+            <a class="button-grid-minimize " href="javascript:void(0);"></a>
+            <a class="button-grid-refresh" href="javascript:void(0);"></a>
+        </div>
+        <div id="grid-container3" class="grid-container"></div>
+    </div>
+
+    <div class="v-center-grid-basic-border" id="s4">
+        <div class="center-grid-first-header">
+            <div class="center-grid-first-header-title">接收机与终端</div>
+            <a class="button-grid-cancel" href="javascript:void(0);"></a>
+            <a class="button-grid-minimize " href="javascript:void(0);"></a>
+            <a class="button-grid-refresh" href="javascript:void(0);"></a>
+        </div>
+        <div id="grid-container4" class="grid-container"></div>
+    </div>
+
+    <div class="v-center-grid-basic-border" id="s5">
+        <div class="center-grid-first-header">
+            <div class="center-grid-first-header-title">观测基地</div>
+            <a class="button-grid-cancel" href="javascript:void(0);"></a>
+            <a class="button-grid-minimize " href="javascript:void(0);"></a>
+            <a class="button-grid-refresh" href="javascript:void(0);"></a>
+        </div>
+        <div id="grid-container5" class="grid-container"></div>
+    </div>
+
+    <div class="v-center-grid-basic-border" id="s6">
+        <div class="center-grid-first-header">
+            <div class="center-grid-first-header-title">RFI监测系统</div>
+            <a class="button-grid-cancel" href="javascript:void(0);"></a>
+            <a class="button-grid-minimize " href="javascript:void(0);"></a>
+            <a class="button-grid-refresh" href="javascript:void(0);"></a>
+        </div>
+        <div id="grid-container6" class="grid-container"></div>
+        
+    </div>    
+    <div style="height:70px; clear:both;">&nbsp;</div>
+</div>
+
+
+
+
+@*<div class="rightbottom">
+        <div id="TaskDisturb1" class="CenterPanelX">
+            <div class="centerHeader">
+                <div class="centerHeaderTitle">反射面系统</div>
+                <div class="centerHeaderButtons">
+                    <a class="centerCollapseButton collapseDelButton" href="javascript:GridPanelToggle1();"></a>
+                    <a class="centerRefreshButton" href="javascript:HeaderQueryData1();"></a>
+                </div>
+            </div>
+            <div class="centerContent">
+                <div id="pnlGirdView1" class="totalCenterDiv"></div>
+            </div>
+        </div>
+
+        <div id="TaskDisturb2" class="CenterPanelX">
+            <div class="centerHeader">
+                <div class="centerHeaderTitle">馈源支撑系统</div>
+                <div class="centerHeaderButtons">
+                    <a class="centerCollapseButton collapseDelButton" href="javascript:GridPanelToggle2();"></a>
+                    <a class="centerRefreshButton" href="javascript:HeaderQueryData2();"></a>
+                </div>
+            </div>
+            <div class="centerContent">
+                <div id="pnlGirdView2" class="totalCenterDiv"></div>
+            </div>
+        </div>
+
+        <div id="TaskDisturb3" class="CenterPanelX">
+            <div class="centerHeader">
+                <div class="centerHeaderTitle">测量与控制系统</div>
+                <div class="centerHeaderButtons">
+                    <a class="centerCollapseButton collapseDelButton" href="javascript:GridPanelToggle3();"></a>
+                    <a class="centerRefreshButton" href="javascript:HeaderQueryData3();"></a>
+                </div>
+            </div>
+            <div class="centerContent">
+                <div id="pnlGirdView3" class="totalCenterDiv"></div>
+            </div>
+        </div>
+
+        <div id="TaskDisturb4" class="CenterPanelX">
+            <div class="centerHeader">
+                <div class="centerHeaderTitle">接收机与终端</div>
+                <div class="centerHeaderButtons">
+                    <a class="centerCollapseButton collapseDelButton" href="javascript:GridPanelToggle4();"></a>
+                    <a class="centerRefreshButton" href="javascript:HeaderQueryData4();"></a>
+                </div>
+            </div>
+            <div class="centerContent">
+                <div id="pnlGirdView4" class="totalCenterDiv"></div>
+            </div>
+        </div>
+
+        <div id="TaskDisturb5" class="CenterPanelX">
+            <div class="centerHeader">
+                <div class="centerHeaderTitle">观测基地</div>
+                <div class="centerHeaderButtons">
+                    <a class="centerCollapseButton collapseDelButton" href="javascript:GridPanelToggle5();"></a>
+                    <a class="centerRefreshButton" href="javascript:HeaderQueryData5();"></a>
+                </div>
+            </div>
+            <div class="centerContent">
+                <div id="pnlGirdView5" class="totalCenterDiv"></div>
+            </div>
+        </div>
+
+        <div id="TaskDisturb6" class="CenterPanelX">
+            <div class="centerHeader">
+                <div class="centerHeaderTitle">RFI监测系统</div>
+                <div class="centerHeaderButtons">
+                    <a class="centerCollapseButton collapseDelButton" href="javascript:GridPanelToggle6();"></a>
+                    <a class="centerRefreshButton" href="javascript:HeaderQueryData6();"></a>
+                </div>
+            </div>
+            <div class="centerContent">
+                <div id="pnlGirdView6" class="totalCenterDiv"></div>
+            </div>
+        </div>
+    </div>*@

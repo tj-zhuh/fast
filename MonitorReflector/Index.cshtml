@@ -1,0 +1,140 @@
+﻿<script src="~/Web_GlobalResources/FASTjs-V1.0/map.js"></script>
+<style>
+	.monitor-reflector-container * {
+		text-align: left;
+		font-family: 'Microsoft YaHei';
+		background-color: transparent;
+	}
+
+	.monitor-reflector-container {
+		background-color: transparent;
+		height: 846px;
+		position: absolute;
+		width: 100%;
+	}
+
+		.monitor-reflector-container .panel {
+			position: absolute;
+			top: 50px;
+			left: 10px;
+			right: 10px;
+			background-color: #595959;
+		}
+
+		.monitor-reflector-container .panel-title {
+			position: absolute;
+			top: 21px;
+			left: 56px;
+			color: #fff;
+			font: normal 16px '黑体';
+		}
+
+		.monitor-reflector-container .top-panel {
+			position: absolute;
+			left: 10px;
+			top: 10px;
+			right: 10px;
+			background-color: #595959;
+			height: 40px;
+		}
+
+		.monitor-reflector-container .bottom-panel {
+			position: absolute;
+			left: 10px;
+			right: 10px;
+			background-color: #595959;
+			height: 50px;
+		}
+
+		.monitor-reflector-container #circleDiv {
+			position: absolute;
+			left: 1.1%;
+			top: 0.5%;
+			height: 90.5%;
+			width: 41.8%;
+			z-index: 1;
+		}
+
+		.monitor-reflector-container #chartDiv {
+			position: absolute;
+			left: 45.5%;
+			top: 1.9%;
+			height: 34.3%;
+			width: 52.7%;
+			z-index: 1;
+		}
+
+		.monitor-reflector-container #trdDiv {
+			position: absolute;
+			left: 45.5%;
+			top: 55%;
+			height: 10%;
+			width: 51%;
+			font-family: Arial;
+			font-size: 34px;
+			font-weight: bold;
+			color: #2AB3A6;
+			text-align: left;
+		}
+
+		.monitor-reflector-container .datas-box {
+		}
+
+			.monitor-reflector-container .datas-box > span {
+				margin-right: 5%;
+			}
+
+				.monitor-reflector-container .datas-box > span > span {
+				}
+
+		.monitor-reflector-container .number {
+			position: absolute;
+			top: 84%;
+			width: 10%;
+			height: 10%;
+			display: inline-block;
+			text-align: center;
+			font-size: 40px;
+		}
+
+		.monitor-reflector-container #number1 {
+			left: 46.4%;
+			color: #00fe00;
+		}
+
+		.monitor-reflector-container #number2 {
+			left: 59.2%;
+			color: #ffd300;
+		}
+
+		.monitor-reflector-container #number3 {
+			left: 71.8%;
+			color: #c5c5c5;
+		}
+
+		.monitor-reflector-container #number4 {
+			left: 84.4%;
+			color: #ff0101;
+		}
+</style>
+
+<div class="ctx container monitor-reflector-container">
+	<div class="top-panel">
+		<div class="panel-title">反射面</div>
+	</div>
+	<div class="panel">
+		<img src="~/Web_GlobalResources/Web_Themes/Images/FAST-V2.0/MonitorReflectorBg.png" />
+		<div id="circleDiv" class="ball"></div>
+		<div id="chartDiv" class="chart"></div>
+		<div id="trdDiv" class="datas-box">
+			<span>X：<span id="spanT"></span></span>
+			<span>Y：<span id="spanR"></span></span>
+			<span>Z：<span id="spanD"></span></span>
+		</div>
+		<div id="number1" class="number">    </div>
+		<div id="number2" class="number">    </div>
+		<div id="number3" class="number">    </div>
+		<div id="number4" class="number">    </div>
+	</div>
+	<div class="bottom-panel"></div>
+</div>

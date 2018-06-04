@@ -1,0 +1,23 @@
+﻿<div class="center-header-container">
+	<div class="center-header-title">
+		<div class="center-header-title-show">文件管理</div>
+	</div>
+	<div class="center-header-query">
+		<div class="header-query-search">
+			<label class="header-query-search-label">文件名:</label>
+			<input id="file-name" class="header-query-search-input" type='text' />
+			<a class="center-header-button-query" href="javascript:query_button_clicked();"></a>
+		</div>
+		<a class="center-header-button-import" href="javascript:upload_button_clicked();"></a>
+	</div>
+</div>
+
+<div class="center-grid-basic-border">
+	<div class="center-grid-first-header">
+		<div class="center-grid-first-header-title">文件管理</div>
+		<a id="btmCancel" class="button-grid-cancel" href="javascript:GridViewClose();"></a>
+		<a id="btmMinimize" class="button-grid-minimize " href="javascript:ViewMinimumSize();"></a>
+		<a id="btmRefresh" class="button-grid-refresh" href="javascript:HeaderQueryData();"></a>
+	</div>
+	<div id="grid-container1" class="center-grid-basic-area"></div>
+</div>

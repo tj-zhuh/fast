@@ -1,0 +1,119 @@
+﻿<div class="center-header-container">
+	<div class="center-header-title">
+		<div class="center-header-title-show">观测队列执行</div>
+	</div>
+	<div class="center-header-query">
+		<div class="header-query-search">
+			<a id="btnInsert" class="center-header-button-aborted" href="javascript:OrderTaskAbort();"></a>
+		</div>
+	</div>
+</div>
+<div class="center-grid-basic-border grid-area-minimun">
+	<div class="center-grid-first-header">
+		<div class="center-grid-first-header-title"></div>
+		<a id="btmCancel" class="button-grid-cancel" href="javascript:GridViewClose();"></a>
+        <a id="btmMinimize" class="button-grid-minimize " href="javascript:ViewMinimumSize();"></a>
+		<a id="btmRefresh" class="button-grid-refresh" href="javascript:HeaderQueryData();"></a>
+	</div>
+
+	<div id="pnlGirdView" class="center-grid-basic-area"></div>
+
+	@*<div class="center-grid-second-header">
+		<a id="btmDelete" class="grid-row-delete" href="javascript:ReomveObserverTask();"></a>
+		<a id="btmMoveTop" class="grid-page-first-new" href="javascript:OrderTaskToFirst();"></a>
+		<a id="btmMoveUp" class="grid-page-preview-new" href="javascript:OrderTaskToQuick();"></a>
+		<a id="btmMoveDown" class="grid-page-next-new" href="javascript:OrderTaskToDown();"></a>
+		<a id="btmMoveBottom" class="grid-page-last-new" href="javascript:OrderTaskToLast();"></a>
+	</div>*@
+	@*<div class="bottombutton">
+			<a id="btmMoveTop" href="javascript:OrderTaskToFirst();"></a>
+			<a id="btmMoveUp" href="javascript:OrderTaskToQuick();"></a>
+			<a id="btmMoveDown" href="javascript:OrderTaskToDown();"></a>
+			<a id="btmMoveBottom" href="javascript:OrderTaskToLast();"></a>
+			<input id="btmToggleCheckbox" type="checkbox" />
+			<a id="btmDelete" href="javascript:ReomveObserverTask();"></a>
+			<a class='bottomSeparator' href="javascript:void(0);" />
+			<a id="btmParking" href="javascript:void(0);"></a>
+			<a class='bottomSeparator' href="javascript:void(0);" />
+			<a id="btmEMI" href="javascript:OnMenuClick('gcrwgr');"></a>
+			<a class='bottomSeparator' href="javascript:void(0);" />
+			<span id="spantimetitle">恒星时：</span><span id="spantime">12:23:54</span>
+		</div>*@
+</div>
+
+<div id="detailTask" class="x-hide" onmouseout="HumanHiddenDelegate()" onmouseover="EnterHiddenDelegate()">
+	<div id="first"></div>
+	<div id="first_state"></div>
+	<div id="second"></div>
+	<div id="second_state"></div>
+	<div id="third"></div>
+	<div id="third_state"></div>
+	<div id="forth"></div>
+	<div id="forth_state"></div>
+	<div id="fifth"></div>
+	<div id="fifth_state"></div>
+	<ul class="tasksecondstatus" style="display: none;">
+		<li><span>主动反射面控制</span><img id="10701"/></li>
+		<li><span>主动反射面测量</span><img id="10401"/></li>
+		<li><span>主动反射面健康监测</span><img id="10501"/></li>
+		<li><span>馈源支撑整体控制</span><img id="10101"/></li>
+		<li><span>馈源支撑测量</span><img id="10201"/></li>
+		<li><span>馈源支撑健康监测</span><img id="10301"/></li>
+		<li><span>接收机与终端</span><img id="10601"/></li>
+	</ul>
+</div>
+
+@*<div id="detailTask" class="x-hide" onmouseout="HumanHiddenDelegate()" onmouseover="EnterHiddenDelegate()">
+	<ul>
+		<li id="first" class="firstclass"><a class="first" href="javascript:void(0);"><em></em></a><span>自检指令下发</span><i id="i10"></i></li>
+		<ul class="tasksecondstatus" style="display: none;">
+			<li><span>主动反射面控制服务器</span><i id="i11"></i></li>
+			<li><span>主动反射面测量服务器</span><i id="i12"></i></li>
+			<li><span>主动反射面健康监测服务器</span><i id="i13"></i></li>
+			<li><span>馈源支撑整体控制服务器</span><i id="i14"></i></li>
+			<li><span>馈源支撑测量服务器</span><i id="i15"></i></li>
+			<li><span>馈源支撑健康监测服务器</span><i id="i16"></i></li>
+			<li><span>接收机与终端服务器</span><i id="i17"></i></li>
+		</ul>
+		<li id="second" class="firstclass"><a href="javascript:void(0);"><em></em></a><span>收取控制权指令下发</span><i id="i20"></i></li>
+		<ul class="tasksecondstatus" style="display: none;">
+			<li><span>主动反射面控制服务器</span><i id="i21"></i></li>
+			<li><span>主动反射面测量服务器</span><i id="i22"></i></li>
+			<li><span>主动反射面健康监测服务器</span><i id="i23"></i></li>
+			<li><span>馈源支撑整体控制服务器</span><i id="i24"></i></li>
+			<li><span>馈源支撑测量服务器</span><i id="i25"></i></li>
+			<li><span>馈源支撑健康监测服务器</span><i id="i26"></i></li>
+			<li><span>接收机与终端服务器</span><i id="i27"></i></li>
+		</ul>
+		<li id="third" class="firstclass"><a href="javascript:void(0);"><em></em></a><span>关闭干扰源</span><i id="i30"></i></li>
+		<ul class="tasksecondstatus" style="display: none;">
+			<li><span>主动反射面控制服务器</span><i id="i31"></i></li>
+			<li><span>主动反射面测量服务器</span><i id="i32"></i></li>
+			<li><span>主动反射面健康监测服务器</span><i id="i33"></i></li>
+			<li><span>馈源支撑整体控制服务器</span><i id="i34"></i></li>
+			<li><span>馈源支撑测量服务器</span><i id="i35"></i></li>
+			<li><span>馈源支撑健康监测服务器</span><i id="i36"></i></li>
+			<li><span>接收机与终端服务器</span><i id="i37"></i></li>
+		</ul>
+		<li id="forth" class="firstclass"><a href="javascript:void(0);"><em></em></a><span>天文观测指令下发</span><i id="i40"></i></li>
+		<ul class="tasksecondstatus" style="display: none;">
+			<li><span>主动反射面控制服务器</span><i id="i41"></i></li>
+			<li><span>主动反射面测量服务器</span><i id="i42"></i></li>
+			<li><span>主动反射面健康监测服务器</span><i id="i43"></i></li>
+			<li><span>馈源支撑整体控制服务器</span><i id="i44"></i></li>
+			<li><span>馈源支撑测量服务器</span><i id="i45"></i></li>
+			<li><span>馈源支撑健康监测服务器</span><i id="i46"></i></li>
+			<li><span>接收机与终端服务器</span><i id="i47"></i></li>
+		</ul>
+		<li id="fifth" class="firstclass"><a href="javascript:void(0);"><em></em></a><span>指令检查</span><i id="i50" class="notfinish"></i></li>
+		<ul class="tasksecondstatus" style="display: none;">
+			<li><span>主动反射面控制服务器</span><i id="i51"></i></li>
+			<li><span>主动反射面测量服务器</span><i id="i52"></i></li>
+			<li><span>主动反射面健康监测服务器</span><i id="i53"></i></li>
+			<li><span>馈源支撑整体控制服务器</span><i id="i54"></i></li>
+			<li><span>馈源支撑测量服务器</span><i id="i55" class="notfinish"></i></li>
+			<li><span>馈源支撑健康监测服务器</span><i id="i56" class="notfinish"></i></li>
+			<li><span>接收机与终端服务器</span><i id="i57" class="notfinish"></i></li>
+		</ul>
+	</ul>
+</div>*@

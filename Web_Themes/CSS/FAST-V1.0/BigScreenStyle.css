@@ -1,0 +1,580 @@
+﻿/*
+** 大屏页面全局样式
+********************************************************************************************************************************/
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Microsoft YaHei';
+}
+
+i {
+	font-style: normal;
+	font-family: Arial;
+}
+
+.top-empty-bar {
+	height: 356px;
+	background-color: #000518;
+}
+
+.container {
+	background-color: #000518;
+}
+
+.full-container {
+	width: 1920px;
+	height: 1080px;
+}
+
+/*Task和Alarm两个页面的布局*/
+.container-task-alarm {
+	padding: 0 23px 15px 23px;
+	height: 709px;
+	width: 1874px;
+}
+
+.flat-container {
+	padding: 36px 26px 28px 26px;
+	height: 692px;
+	width: 1868px;
+}
+
+.inner-container {
+	width: 100%;
+	height: 100%;
+}
+
+.title-bar {
+	background: -webkit-gradient(linear, 0% 0%, 100% 0%,from(#100F14), to(#0D1218));
+	height: 92px;
+	line-height: 92px;
+	color: white;
+	font-size: 35px;
+	padding-left: 66px;
+}
+
+.content {
+	height: 924px;
+	width: 1868px;
+}
+
+.blue-text {
+	color: #8EE1FE;
+}
+
+.green-text {
+	color: #04f602;
+}
+
+.yellow-text {
+	color: #fff001;
+}
+
+/* grid 样式 */
+.x-panel * {
+	border: 0;
+	background: inherit;
+}
+
+.x-grid-header-ct .x-box-item {
+	height: 132px;
+	line-height: 114px;
+	font-size: 56px;
+	background-color: #031f2d;
+	color: #ffffff;
+	font-family: "Microsoft YaHei";
+	font-weight: normal;
+}
+
+.x-grid-cell {
+	height: 142px;
+	line-height: 142px;
+	font-size: 48px;
+	color: #9ae6f3;
+}
+
+.x-grid-cell-inner {
+	text-overflow: ellipsis;
+	padding: 0px 9px 0px 10px;
+}
+
+.odd-task-row .x-grid-cell {
+	background-color: #092533;
+}
+
+.even-task-row .x-grid-cell {
+	background-color: #011C2D;
+}
+
+.x-grid-header-ct {
+	padding: 2px 2px 0px 2px;
+	background-color: #000518;
+}
+
+.x-grid-body {
+	padding: 0px 2px 0 2px;
+	background-color: #000518;
+}
+
+/*****************************************************************************************
+*                                                                                        *
+*                                   HomeScreen                                           *
+*                                                                                        *
+*****************************************************************************************/
+
+.container-home {
+	background: url(../../Images/FAST-V1.0/home-bg.png) 0 0;
+	position: absolute;
+	width: 1920px;
+	height: 1080px;
+}
+
+	.container-home .box {
+		position: absolute;
+		width: 352px;
+		height: 352px;
+		background: url(../../Images/FAST-V1.0/box-normal-grey.png) 0 0;
+	}
+
+	.container-home #b1.box {
+		background: url(../../Images/FAST-V1.0/box-corner-grey.png) 0 0;
+	}
+
+	.container-home .box.blue {
+		background: url(../../Images/FAST-V1.0/box-normal-blue.png) 0 0;
+	}
+
+	.container-home #b1.box.blue {
+		background: url(../../Images/FAST-V1.0/box-corner-blue.png) 0 0;
+	}
+
+	.container-home .state {
+		background-size: 154px 100px;
+	}
+
+		.container-home .state.debug-all {
+			background: url(../../Images/FAST-V1.0/state-debug-all.png) 0 0;
+		}
+
+		.container-home .state.debug {
+			background: url(../../Images/FAST-V1.0/state-debug.png) 0 0;
+		}
+
+		.container-home .state.error {
+			background: url(../../Images/FAST-V1.0/state-error.png) 0 0;
+		}
+
+		.container-home .state.initial {
+			background: url(../../Images/FAST-V1.0/state-initial.png) 0 0;
+		}
+
+		.container-home .state.normal {
+			background: url(../../Images/FAST-V1.0/state-normal.png) 0 0;
+		}
+
+		.container-home .state.observe {
+			background: url(../../Images/FAST-V1.0/state-observe.png) 0 0;
+		}
+
+		.container-home .state.prepare {
+			background: url(../../Images/FAST-V1.0/state-prepare.png) 0 0;
+		}
+
+		.container-home .state.run-with-error {
+			background: url(../../Images/FAST-V1.0/state-run-with-error.png) 0 0;
+		}
+
+		.container-home .state.run {
+			background: url(../../Images/FAST-V1.0/state-run.png) 0 0;
+		}
+
+		.container-home .state.stop {
+			background: url(../../Images/FAST-V1.0/state-stop.png) 0 0;
+		}
+
+		.container-home .state.wait {
+			background: url(../../Images/FAST-V1.0/state-wait.png) 0 0;
+		}
+
+	.container-home .box.unknown .state {
+		display: none;
+	}
+
+/*****************************************************************************************
+*                                                                                        *
+*                                     监控页面                                           *
+*                                                                                        *
+*****************************************************************************************/
+
+.container-monitor {
+	background: url(../../Images/FAST-V1.0/monitor-bg.png) 0 0;
+	position: absolute;
+	width: 1920px;
+	height: 1080px;
+}
+
+.monitor6 {
+	background: url(../../Images/FAST-V1.0/monitor6-bg.png) 0 0;
+	background-size: 1920px 1080px;
+}
+
+#s1 {
+	position: absolute;
+	left: 10px;
+	top: 347px;
+	height: 350px;
+	width: 633px;
+}
+
+#s2 {
+	position: absolute;
+	left: 645px;
+	top: 347px;
+	height: 350px;
+	width: 633px;
+}
+
+#s3 {
+	position: absolute;
+	left: 1280px;
+	top: 347px;
+	height: 350px;
+	width: 633px;
+}
+
+#s4 {
+	position: absolute;
+	left: 10px;
+	top: 700px;
+	height: 350px;
+	width: 633px;
+}
+
+#s5 {
+	position: absolute;
+	left: 645px;
+	top: 700px;
+	height: 350px;
+	width: 633px;
+}
+
+#s6 {
+	position: absolute;
+	left: 1280px;
+	top: 700px;
+	height: 350px;
+	width: 633px;
+}
+
+.monitor6 #s1 {
+	top: 174px;
+	height: 433px;
+}
+
+.monitor6 #s2 {
+	top: 174px;
+	height: 433px;
+}
+
+.monitor6 #s3 {
+	top: 174px;
+	height: 433px;
+}
+
+.monitor6 #s4 {
+	top: 600px;
+	height: 470px;
+}
+
+.monitor6 #s5 {
+	top: 600px;
+	height: 470px;
+}
+
+.monitor6 #s6 {
+	top: 600px;
+	height: 470px;
+}
+
+#box1 {
+	background: -webkit-gradient(linear, 0% 0%, 100% 0%,from(#362D2E), to(#35343C));
+}
+
+#box2 {
+	background: -webkit-gradient(linear, 0% 0%, 100% 0%,from(#363640), to(#2F3B49));
+}
+
+#box3 {
+	background: -webkit-gradient(linear, 0% 0%, 100% 0%,from(#2D3947), to(#2A3A47));
+}
+
+#box4 {
+	background: -webkit-gradient(linear, 0% 0%, 100% 0%,from(#362D2E), to(#35343C));
+}
+
+#box5 {
+	background: -webkit-gradient(linear, 0% 0%, 100% 0%,from(#363640), to(#2F3B49));
+}
+
+#box6 {
+	background: -webkit-gradient(linear, 0% 0%, 100% 0%,from(#2D3947), to(#2A3A47));
+}
+
+.container-monitor .data-box {
+	float: left;
+	width: 596px;
+	margin: 20px 0 0 20px;
+}
+
+.container-monitor .blue-text, .container-monitor .box-text {
+	font-family: Arial;
+}
+
+/*****************************************************************************************
+*                                                                                        *
+*                                   TaskScreen                                           *
+*                                                                                        *
+*****************************************************************************************/
+
+.task-top-empty-bar {
+	background-image: url(../../Images/FAST-V1.0/LOGO.png);
+	background-repeat: no-repeat;
+	background-position-x: 7%;
+	background-position-y: 48px;
+	background-size: 430px;
+}
+
+.notstart {
+	color: #ded97a;
+}
+
+.start {
+	color: #01ff5b;
+}
+
+.prepare {
+	color: #7e00ff;
+}
+
+.observe {
+	color: #00ff8a;
+}
+
+.stop {
+	color: #ff0012;
+}
+
+.finish {
+	color: #ff0072;
+}
+
+.running {
+	color: #00f3f3;
+}
+
+.no-running {
+	color: #fff585;
+}
+
+/*****************************************************************************************
+*                                                                                        *
+*                                    报警页面                                            *
+*                                                                                        *
+*****************************************************************************************/
+
+/*.alarm-top-empty-bar { background-image: url(../../Images/FAST-V1.0/weather.png); background-repeat: no-repeat; background-position-x: 100%; background-position-y: 0px; }*/
+
+#weatherPicture.Fine { background-image: url(../../Images/FAST-V1.0/weather-fine.png);}
+#weatherPicture.Cloudy {background-image: url(../../Images/FAST-V1.0/weather-cloud.png); }
+#weatherPicture.Rain { background-image: url(../../Images/FAST-V1.0/weather-rain.png);}
+#weatherPicture.Snow {background-image: url(../../Images/FAST-V1.0/weather-snow.png); }
+
+/*****************************************************************************************
+*                                                                                        *
+*                                   反射面页面                                           *
+*                                                                                        *
+*****************************************************************************************/
+
+.container-reflector {
+	background: url(../../Images/FAST-V1.0/reflector-bg.png) 0 0;
+	position: absolute;
+}
+
+	.container-reflector #circleDiv {
+		position: absolute;
+		left: 64px;
+		top: 173px;
+		height: 858px;
+		width: 858px;
+	}
+
+	.container-reflector #chartDiv {
+		position: absolute;
+		left: 930px;
+		top: 230px;
+		height: 340px;
+		width: 900px;
+	}
+
+	.container-reflector #trdDiv {
+		position: absolute;
+		left: 892px;
+		top: 626px;
+		height: 200px;
+		width: 1000px;
+		font-family: Arial;
+	}
+
+	.container-reflector #chartMark {
+		position: absolute;
+		left: 921px;
+		top: 387px;
+		height: 30px;
+		width: 20px;
+	}
+
+	.container-reflector .datas-box {
+		height: 200px;
+		margin-top: 75px;
+	}
+
+		.container-reflector .datas-box > span {
+			color: #99e5f2;
+			font-weight: bold;
+			font-size: 37px;
+			margin-left: 65px;
+		}
+
+			.container-reflector .datas-box > span > span {
+				color: #01ffff;
+				font-weight: bold;
+				font-size: 37px;
+			}
+
+	.container-reflector .number {
+		position: absolute;
+		top: 940px;
+		width: 173px;
+		height: 100px;
+		display: inline-block;
+		text-align: center;
+		font-size: 40px;
+	}
+
+#number1 {
+	left: 959px;
+	color: #00fe00;
+}
+
+#number2 {
+	left: 1199px;
+	color: #fffd00;
+}
+
+#number3 {
+	left: 1435px;
+	color: #bfbfbf;
+}
+
+#number4 {
+	left: 1671px;
+	color: #ff0101;
+}
+
+/*****************************************************************************************
+*                                                                                        *
+*                                      Feed                                              *
+*                                                                                        *
+*****************************************************************************************/
+
+.container-feed {
+	background: url(../../Images/FAST-V1.0/feed-bg.png) 0 0;
+	position: absolute;
+}
+
+	.container-feed #circleDiv1 {
+		position: absolute;
+		left: 134px;
+		top: 180px;
+		height: 600px;
+		width: 600px;
+	}
+
+	.container-feed #circleDiv2 {
+		position: absolute;
+		left: 134px;
+		top: 480px;
+		height: 560px;
+		width: 600px;
+	}
+
+	.container-feed #chartDiv1 {
+		position: absolute;
+		left: 780px;
+		top: 150px;
+		height: 260px;
+		width: 1000px;
+	}
+
+	.container-feed #chartDiv2 {
+		position: absolute;
+		left: 780px;
+		top: 460px;
+		height: 260px;
+		width: 1000px;
+	}
+
+	.container-feed #trdDiv {
+		position: absolute;
+		left: 849px;
+		top: 725px;
+		height: 200px;
+		width: 900px;
+	}
+
+	.container-feed #chartLegend {
+		position: absolute;
+		left: 1612px;
+		top: 170px;
+		height: 30px;
+		width: 20px;
+	}
+
+	.container-feed #chartMark1 {
+		position: absolute;
+		left: 779px;
+		top: 232px;
+		height: 30px;
+		width: 20px;
+	}
+
+	.container-feed #chartMark2 {
+		position: absolute;
+		left: 779px;
+		top: 575px;
+		height: 30px;
+		width: 20px;
+	}
+
+	.container-feed .datas-box {
+		color: #99e5f2;
+		font-weight: normal;
+		font-size: 50px;
+		text-align: left;
+		margin: 85px 0 0 80px;
+	}
+
+	.container-feed .line {
+		height: 73px;
+		line-height: 73px;
+	}
+
+	.container-feed .xyz-label {
+		font-family: Arial;
+	}
+
+	.container-feed .text {
+		display: inline-block;
+		width: 205px;
+		font-family: Arial;
+	}

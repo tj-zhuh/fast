@@ -1,0 +1,34 @@
+﻿<div class="righttop">
+	<div class="righttop1">
+		<div class="righttoptitle">观测任务查询</div>
+	</div>
+	<div class="righttop2">
+		<div class="search">
+			<label>源名:</label>
+			<input id="txtDICTATE_NAME" placeholder="  请输入源名......" type="text" />
+			<a href="javascript:HeaderQueryData();"></a>
+		</div>
+		<div>
+			<label>持续时间：</label>
+			<label id="lasttmvalue" style="width:30px;"></label>
+		</div>
+		<div>
+			<label>计划开始：</label>
+			<label id="starttmvalue" style="width:135px;"></label>
+		</div>
+	</div>
+</div>
+<div class="rightbottom">
+	<div id="TaskQuery" class="totalCenterPanel">
+		<div class="centerHeader">
+			<div class="centerHeaderTitle">观测任务查询</div>
+			<div class="centerHeaderButtons">
+				<a class="centerCollapseButton collapseDelButton" href="javascript:GridPanelToggle();"></a>
+				<a class="centerRefreshButton" href="javascript:HeaderQueryData();"></a>
+			</div>
+		</div>
+		<div class="centerContent">
+			<div id="pnlGirdView" class="totalCenterDiv"></div>
+		</div>
+	</div>
+</div>

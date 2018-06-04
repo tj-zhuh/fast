@@ -1,0 +1,102 @@
+﻿<style>
+	.container-observer-home .author {
+		left: 21%;
+	}
+
+	.container-observer-home .icon.mode {
+		left: 40%;
+	}
+
+	.container-observer-home .icon.state {
+		left: 59%;
+	}
+
+	.container-observer-home .control {
+		height: 140px;
+		width: 173px;
+		right: 0;
+		top: 0;
+		cursor: pointer;
+	}
+</style>
+
+<div class="ctx container-observer-home">
+	<div id="b1" class="panel panel-top">
+		<div class="panel-title">总控系统</div>
+		<div id="ball1" class="ball mode"></div>
+		<div id="ball2" class="ball state"></div>
+		<div id="ball3" class="ball">
+			<div id="control-num"></div>
+		</div>
+		<div id="task-state-box" class="top-right-bar">
+			状态：<span id="taskState"></span>
+		</div>
+		<div class="top-right-bar observe-bar observe-time">
+			<div class="title">观测时间</div>
+			<div id="taskTime1" class="taskbar complete">已用时间 : <span id="taskTimeComplete"></span></div>
+			<div id="taskTime2" class="taskbar total">总共时间 : <span id="taskTimeTotal"></span></div>
+		</div>
+
+		<div class="top-right-bar observe-bar observe-sequence">
+			<div class="title">观测队列</div>
+			<div id="taskSequence1" class="taskbar complete">已完成 : <span id="taskSequenceComplete"></span></div>
+			<div id="taskSequence2" class="taskbar total">总共 : <span id="taskSequenceTotal"></span></div>
+		</div>
+	</div>
+	<div id="b2" class="panel subpanel panel-left panel-line1">
+		<div class="panel-title">主动反射面控制服务器</div>
+		<div class="icon wifi"></div>
+		<div class="icon author"></div>
+		<div class="icon mode"></div>
+		<div class="icon state"></div>
+		<div class="control"></div>
+	</div>
+	<div id="b3" class="panel subpanel panel-left panel-line2">
+		<div class="panel-title">主动反射面测量服务器</div>
+		<div class="icon wifi"></div>
+		<div class="icon author"></div>
+		<div class="icon mode"></div>
+		<div class="icon state"></div>
+		<div class="control"></div>
+	</div>
+	<div id="b4" class="panel subpanel panel-left panel-line3">
+		<div class="panel-title">主动反射面健康监测服务器</div>
+		<div class="icon wifi"></div>
+		<div class="icon author"></div>
+		<div class="icon mode"></div>
+		<div class="icon state"></div>
+		<div class="control"></div>
+	</div>
+	<div id="b8" class="panel subpanel panel-left panel-line4">
+		<div class="panel-title">接收机与终端服务器</div>
+		<div class="icon wifi"></div>
+		<div class="icon author"></div>
+		<div class="icon mode"></div>
+		<div class="icon state"></div>
+		<div class="control"></div>
+	</div>
+	<div id="b5" class="panel subpanel panel-right panel-line1">
+		<div class="panel-title">馈源支撑整体控制服务器</div>
+		<div class="icon wifi"></div>
+		<div class="icon author"></div>
+		<div class="icon mode"></div>
+		<div class="icon state"></div>
+		<div class="control"></div>
+	</div>
+	<div id="b6" class="panel subpanel panel-right panel-line2">
+		<div class="panel-title">馈源支撑测量服务器</div>
+		<div class="icon wifi"></div>
+		<div class="icon author"></div>
+		<div class="icon mode"></div>
+		<div class="icon state"></div>
+		<div class="control"></div>
+	</div>
+	<div id="b7" class="panel subpanel panel-right panel-line3">
+		<div class="panel-title">馈源支撑健康监测服务器</div>
+		<div class="icon wifi"></div>
+		<div class="icon author"></div>
+		<div class="icon mode"></div>
+		<div class="icon state"></div>
+		<div class="control"></div>
+	</div>
+</div>

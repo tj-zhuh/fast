@@ -1,0 +1,1575 @@
+﻿/*
+** 全局样式
+********************************************************************************************************************************/
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	font-family: '微软雅黑';
+	font-size: 12px;
+	color: #121212;
+	outline: none;
+	text-align: center;
+}
+
+body.x-body {
+	position: relative;
+	background: #333;
+	width: 100%;
+	overflow: auto;
+	min-width: 1900px;
+	min-height: 900px;
+}
+
+/*
+** 顶部菜单样式
+********************************************************************************************************************************/
+#head_bg {
+	position: absolute;
+	top: 0;
+	left: 300px;
+	right: 0;
+	height: 66px;
+	min-width: 1600px;
+	background-color: #fff;
+}
+
+	#head_bg .tool ul li, #head_bg .tool ul li a {
+		width: 16px;
+		height: 16px;
+	}
+
+	#head_bg .tool ul li {
+		position: relative;
+		float: left;
+		margin: 30px 20px 0 0;
+	}
+
+	#head_bg .tool ul .log {
+		margin-left: 30px;
+		background: url(../../Images/FAST-V1.0/ico_nav.png) 0 0;
+	}
+
+	#head_bg .tool ul .home {
+		background: url(../../Images/FAST-V1.0/ico_home.png) 0 0;
+	}
+
+	#head_bg .tool ul .data {
+		margin-top: 30px;
+		width: 15px;
+		height: 15px;
+		background: url(../../Images/FAST-V1.0/data.png) 0 0;
+	}
+
+#idAlarm {
+	cursor: pointer;
+}
+
+#head_bg .tool ul .alarmmmes {
+	display: none;
+	margin-top: 10px;
+	margin-left: -33px;
+	width: 26px;
+	height: 26px;
+	background: url(../../Images/FAST-V1.0/ico_xx.png) 0 0;
+}
+
+#head_bg .tool ul .alarmmmesnum {
+	display: none;
+	margin-top: 12px;
+	margin-left: -45px;
+	width: 26px;
+	height: 26px;
+}
+
+#head_bg .role ul li {
+	position: relative;
+	float: right;
+	margin-top: 30px;
+}
+
+a.search {
+	width: 28px;
+	height: 28px;
+	vertical-align: bottom;
+	line-height: 24px;
+	font-size: 20px;
+}
+
+#head_bg .role ul .se {
+	margin: 30px 10px 0px 0px;
+	width: 100px;
+	height: 20px;
+}
+
+	#head_bg .role ul .se #i1 {
+		float: left;
+		width: 16px;
+		height: 15px;
+		margin-top: 2px;
+		margin-left: 10px;
+		background: url(../../Images/FAST-V1.0/dituico.png);
+	}
+
+	#head_bg .role ul .se #i2 {
+		float: left;
+		width: 55px;
+		height: 20px;
+		background: url(../../Images/FAST-V1.0/chinese.png) -5px 0px;
+	}
+
+	#head_bg .role ul .se sub {
+		float: left;
+		width: 15px;
+		height: 15px;
+		margin-top: 2px;
+		background: url(../../Images/FAST-V1.0/ico_down.png) no-repeat;
+	}
+
+#head_bg .role ul .ro {
+	position: relative;
+	margin: 30px 10px 0px 0px;
+	width: 96px;
+	height: 36px;
+}
+
+	#head_bg .role ul .ro i {
+		float: left;
+		width: 34px;
+		height: 34px;
+		margin-top: -9px;
+		margin-left: -40px;
+		background: url(../../Images/FAST-V1.0/user-4.png);
+	}
+
+	#head_bg .role ul .ro sub {
+		float: right;
+		width: 25px;
+		height: 25px;
+		margin-top: 2px;
+		margin-right: 0;
+		background: url(../../Images/FAST-V1.0/ico_down.png) no-repeat;
+	}
+
+#head_bg .role ul .me {
+	margin-right: 30px;
+	width: 16px;
+	height: 16px;
+	background: url(../../Images/FAST-V1.0/ico_xiaoxi.png) 0 0;
+	background-repeat: no-repeat;
+}
+
+.message {
+	width: 100%;
+	height: 100%;
+}
+/*
+** 左侧菜单样式
+********************************************************************************************************************************/
+#left {
+	position: relative;
+	float: left;
+	width: 300px;
+	height: 100%;
+	min-height: 900px;
+	margin: 0;
+	overflow: hidden;
+	background-color: #333333;
+}
+
+#menu_nav {
+	margin-top: 8%;
+	height: 64%;
+	width: 100%;
+}
+
+#divpagelogo {
+	height: 140px;
+	width: 300px;
+	background: url("../../Images/FAST-V1.0/logo.png") no-repeat 15px;
+}
+
+#menu_nav ul {
+	width: 300px;
+	border-radius: 2px;
+}
+
+	#menu_nav ul li {
+		display: block;
+		height: 46px;
+		margin-top: 0;
+		border-bottom: 1px #394b62 solid;
+	}
+
+	#menu_nav ul .cur, #menu_nav li:hover {
+		background: #283c54;
+	}
+
+#menu_nav li a {
+	height: 54px;
+}
+
+#menu_nav li span {
+	float: left;
+	margin-top: 12px;
+	height: 20px;
+	color: #bbbbbb;
+	font-size: 15px;
+	vertical-align: middle;
+}
+
+#menu_nav li em {
+	float: right;
+	width: 15px;
+	height: 15px;
+	margin: 13px 20px 0 0;
+	background: url(../../Images/FAST-V1.0/ico_down.png) no-repeat;
+	transition: width 2s;
+	-moz-transition: width 2s;
+	-webkit-transition: width 2s;
+	-o-transition: width 2s;
+}
+
+#menu_nav li .active em {
+	background: url(../../Images/FAST-V1.0/ico_go.png) no-repeat;
+}
+
+.second_ul {
+	display: none;
+}
+
+ul.expandmenu {
+	display: block;
+}
+
+#menu_nav ul .second_ul li {
+	padding-left: 80px;
+	width: 100%;
+	height: 44px;
+	font-size: 5px;
+}
+
+#menu_nav li i {
+	float: left;
+	width: 30px;
+	height: 30px;
+	margin: 7px 6px 0 10px;
+}
+
+#menu_nav #gcrwgl i {
+	background: url(../../Images/FAST-V1.0/taskmanage.png)0 0;
+}
+
+#menu_nav #gcrwgl .pmenuselected {
+	background: url(../../Images/FAST-V1.0/taskmanageactive.png)0 0;
+}
+
+#menu_nav #gcrzgl i {
+	background: url(../../Images/FAST-V1.0/logmanage.png) 0 0;
+}
+
+#menu_nav #gcrzgl .pmenuselected {
+	background: url(../../Images/FAST-V1.0/logmanageactive.png) 0 0;
+}
+
+#menu_nav #gcshjk i {
+	background: url(../../Images/FAST-V1.0/dynamicdatamanage.png) 0 0;
+}
+
+#menu_nav #gcshjk .pmenuselected {
+	background: url(../../Images/FAST-V1.0/dynamicdatamanageactive.png) 0 0;
+}
+
+#menu_nav #zttsgl i {
+	background: url(../../Images/FAST-V1.0/debugmanage.png) 0 0;
+}
+
+#menu_nav #zttsgl .pmenuselected {
+	background: url(../../Images/FAST-V1.0/debugmanageactive.png) 0 0;
+}
+
+#menu_nav #ztsjgl i {
+	background: url(../../Images/FAST-V1.0/staticdatamanage.png)0 0;
+}
+
+#menu_nav #ztsjgl .pmenuselected {
+	background: url(../../Images/FAST-V1.0/staticdatamanageactive.png)0 0;
+}
+
+#menu_nav #xtqxgl i {
+	background: url(../../Images/FAST-V1.0/rightmanage.png) 0 0;
+}
+
+#menu_nav #xtqxgl .pmenuselected {
+	background: url(../../Images/FAST-V1.0/rightmanageactive.png) 0 0;
+}
+
+#menu_nav #xtcsgl i {
+	background: url(../../Images/FAST-V1.0/systemconfig.png) 0 0;
+}
+
+#menu_nav #xtcsgl .pmenuselected {
+	background: url(../../Images/FAST-V1.0/systemconfigactive.png) 0 0;
+}
+
+#menu_nav li span.menuselected {
+	color: White;
+}
+/*
+** 主页中心区域样式
+********************************************************************************************************************************/
+div.divrightcol {
+	position: absolute;
+	top: 66px;
+	left: 300px;
+	right: 0;
+	bottom: 0;
+	display: block;
+	min-width: 1600px;
+	min-height: 834px;
+	background-color: #DBDBDB;
+	font-family: 宋体;
+}
+
+div.divtasktop {
+	margin: 2% 2.1% 0 2.1%;
+	vertical-align: middle;
+	top: 70px;
+	width: 95.8%;
+	height: 131px;
+	background-color: #C9C9C9;
+}
+
+div.divtasktoptext {
+	position: relative;
+	float: left;
+	left: 40px;
+	top: 50px;
+	display: inline-block;
+	width: 90px;
+	vertical-align: middle;
+	font-size: 20px;
+	font-weight: bolder;
+	color: #666666;
+}
+
+div.divtasktopsystem {
+	position: relative;
+	float: left;
+	top: 30px;
+	left: 220px;
+	width: 70px;
+	vertical-align: bottom;
+	display: inline-block;
+	text-align: center;
+	color: #aaaaaa;
+	font-size: 14px;
+}
+
+div.divtasktopsystem2 {
+	left: 280px;
+}
+
+div.divtasktoptime {
+	float: left;
+	position: relative;
+	left: 360px;
+	top: 0;
+	display: inline-block;
+	background-image: url("../../Images/FAST-V1.0/taskbackground.png");
+	height: 131px;
+	width: 131px;
+	text-align: center;
+	color: #000000;
+	vertical-align: middle;
+}
+
+div.divtime {
+	margin-top: 50px;
+}
+
+	div.divtime span {
+		font-size: 20pt;
+		font-weight: bolder;
+		font-family: Stencil;
+	}
+
+div.divtasktopinfo {
+	float: left;
+	position: relative;
+	left: 430px;
+	top: 30px;
+	display: inline-block;
+	width: 131px;
+	text-align: center;
+	color: #aaaaaa;
+}
+
+span.spanblock {
+	display: block;
+	text-align: center;
+	color: #888888;
+}
+
+#spansysnumbinctrl {
+	color: Red;
+	font-size: 20px;
+	font-weight: bolder;
+}
+
+div.divtasktopsystem3 {
+	top: 50px;
+	left: 480px;
+}
+
+button.controlbutton {
+	background-color: #33aaee;
+	color: #dddddd;
+	border: 1px solid #555555;
+	width: 100px;
+	height: 35px;
+	text-align: center;
+	vertical-align: top;
+	font-weight: bold;
+	font-size: 16px;
+	padding-top: 0;
+}
+
+div.divtasktopsystem4 {
+	top: 50px;
+	left: 560px;
+}
+
+button.controlbutton2 {
+	background-color: White;
+	color: #666666;
+	border: 1px solid #555555;
+	width: 100px;
+	height: 35px;
+	text-align: center;
+	vertical-align: top;
+	font-weight: bold;
+	font-size: 16px;
+	padding-top: 0;
+}
+
+div.divtasks1 {
+	float: left;
+	margin: 2% 1% 1% 2%;
+	vertical-align: middle;
+	width: 46.5%;
+	top: 160px;
+	height: 90px;
+	display: inline-block;
+	background-color: #C9C9C9;
+	font-family: 宋体;
+	border: 2px solid #C9C9C9;
+}
+
+div.divtasks2 {
+	float: right;
+	margin: 2% 2% 1% 1%;
+	vertical-align: middle;
+	width: 46.5%;
+	top: 160px;
+	height: 90px;
+	display: inline-block;
+	background-color: #C9C9C9;
+	font-family: 宋体;
+	border: 2px solid #C9C9C9;
+}
+
+div.divtaskstext {
+	float: left;
+	left: 18px;
+	top: 15px;
+	display: block;
+	width: 260px;
+	height: 20px;
+	font-size: 14px;
+	text-align: left;
+}
+
+div.divtasksubsystem {
+	float: right;
+	position: relative;
+	width: 400px;
+	vertical-align: bottom;
+	display: inline;
+	text-align: center;
+	color: #aaaaaa;
+}
+
+div.divtasksubsystemstatus {
+	float: left;
+	width: 280px;
+	margin-left: 20px;
+	margin-top: 20px;
+}
+
+	div.divtasksubsystemstatus img {
+		margin-left: 40px;
+	}
+
+div.divtasktopsystem5 {
+	position: absolute;
+	left: 30px;
+}
+
+div.divtasktopsystem6 {
+	position: absolute;
+	left: 80px;
+	top: 20px;
+}
+
+div.divtasktopsystem7 {
+	position: absolute;
+	left: 230px;
+	top: 20px;
+}
+
+div.divtasksubsystem2 {
+	left: 170px;
+}
+
+img.selectimg {
+	position: relative;
+	float: right;
+	visibility: hidden;
+	top: 43px;
+}
+
+/*
+** 实时通讯样式
+********************************************************************************************************************************/
+#RightPopDiv {
+	position: fixed;
+	right: 0;
+	width: 400px;
+	height: 500px;
+	border: 2px solid #aaaaaa;
+	background-color: #cccccc;
+	top: 60px;
+	z-index: 200;
+	visibility: hidden;
+	border-radius: 6px;
+}
+
+#RightHalf {
+	position: relative;
+	float: right;
+	width: 100px;
+	height: 280px;
+	right: 5px;
+}
+
+#top {
+	margin-top: 10px;
+	height: 60px;
+	width: 100%;
+	text-align: center;
+	vertical-align: bottom;
+	font-size: larger;
+	color: #aa7733;
+	background-color: #eeeeff;
+}
+
+#LeftHalf {
+	position: relative;
+	height: 480px;
+	top: 10px;
+	left: 5px;
+	width: 290px;
+	border-right-width: 1px;
+	border-right-style: dashed;
+	border-right-color: Gray;
+}
+
+#MessageList {
+	width: 280px;
+	height: 440px;
+	border-width: thin;
+	border-style: inset;
+	text-align: left;
+	background-color: White;
+	margin-bottom: 10px;
+}
+
+#MessageBox {
+	float: left;
+	top: 450px;
+	left: 10px;
+	width: 220px;
+	height: 22px;
+	border-width: thin;
+	border-style: inset;
+	text-align: left;
+}
+
+#ChatSubmit {
+	float: right;
+	top: 450px;
+	width: 40px;
+	height: 22px;
+	margin-right: 10px;
+}
+
+#RightPopDiv li {
+	margin-left: 10%;
+	padding-top: 10px;
+	width: 80%;
+	height: 40px;
+	border-bottom: 1px solid #aaaaaa;
+	list-style: none;
+	vertical-align: middle;
+}
+
+div.frommessage {
+	margin: 3px 1px;
+	width: 250px;
+	text-align: left;
+	position: relative;
+	display: block;
+	float: left;
+	padding: 3px;
+	background-color: #aaaaff;
+}
+
+	div.frommessage .ChatTime {
+		color: Blue;
+		font-weight: bold;
+		padding: 0 2px;
+	}
+
+	div.frommessage .ChatName {
+		color: Red;
+		font-weight: bold;
+		padding: 0 2px;
+	}
+
+div.tomessage {
+	margin: 3px 1px;
+	width: 250px;
+	text-align: left;
+	position: relative;
+	display: block;
+	float: right;
+	padding: 3px;
+	background-color: #ffffaa;
+}
+
+	div.tomessage .ChatTime {
+		color: Blue;
+		font-weight: bold;
+		padding: 0 2px;
+	}
+
+	div.tomessage .ChatName {
+		color: Red;
+		font-weight: bold;
+		padding: 0 2px;
+	}
+
+#TopPopDiv {
+	position: absolute;
+	right: 175px;
+	width: 90px;
+	/*height: 154px;*/
+	height: 31px;
+	border: 2px solid #aaaaaa;
+	background-color: #cccccc;
+	top: 50px;
+	z-index: 100;
+	visibility: hidden;
+}
+
+	#TopPopDiv ul {
+		height: 100%;
+	}
+
+		#TopPopDiv ul li {
+			margin-left: 10%;
+			padding-top: 10px;
+			width: 80%;
+			height: 20px;
+			border-bottom: 1px solid #aaaaaa;
+			list-style: none;
+			vertical-align: bottom;
+		}
+
+/*
+** 语言栏样式
+********************************************************************************************************************************/
+
+#lang {
+	position: absolute;
+	right: 60px;
+	width: 90px;
+	height: 60px;
+	top: 50px;
+	visibility: hidden;
+	border: 2px solid #aaaaaa;
+	background-color: #cccccc;
+}
+
+	#lang i {
+		float: left;
+		width: 22px;
+		height: 16px;
+		margin: 6px 6px 0 0;
+	}
+
+	#lang .chinese {
+		background: url(../../Images/FAST-V1.0/icons2.png) no-repeat;
+	}
+
+	#lang .english {
+		background: url(../../Images/FAST-V1.0/icons2.png) -127px -30px no-repeat;
+	}
+
+	#lang sub {
+		float: right;
+		width: 8px;
+		height: 8px;
+		margin: 10px 0 0 9px;
+		background: url(../../Images/FAST-V1.0/icons2.png) -7px -85px no-repeat;
+	}
+
+	#lang ul {
+		position: absolute;
+		left: 0;
+		top: 0;
+		z-index: 10;
+		width: 100%;
+		box-shadow: 0 3px 13px -3px #000;
+		border-radius: 3px;
+	}
+
+		#lang ul li {
+			width: 100%;
+			height: 29px;
+			line-height: 29px;
+			cursor: pointer;
+			border-bottom: 1px #aaaaaa solid;
+		}
+
+		#lang ul .no_border {
+			border: none;
+		}
+
+		#lang ul li a {
+			display: block;
+			font-size: 12px;
+			padding: 0 0 0 10px;
+		}
+/*
+** 观测任务管理样式
+********************************************************************************************************************************/
+.totalCenterPanel {
+	margin: 2%;
+	vertical-align: middle;
+	width: 96%;
+	top: 70px;
+	display: block;
+	background-color: White;
+	font-family: 宋体;
+	overflow: hidden;
+}
+
+.centerHeader, .centerBottom {
+	display: block;
+	height: 50px;
+}
+
+div.centerHeaderTitle {
+	display: inline;
+	float: left;
+	color: #333333;
+	font-size: 16px;
+	padding: 15px 0 20px 35px;
+}
+
+div.centerHeaderButtons {
+	position: relative;
+	display: inline;
+	float: right;
+	width: 100px;
+	height: 100%;
+}
+
+a.centerCollapseButton {
+	position: relative;
+	display: inline-block;
+	width: 19px;
+	height: 19px;
+	margin-right: 2px;
+	top: 20px;
+	vertical-align: top;
+}
+
+.collapseDelButton {
+	background: url(../../Images/FAST-V1.0/minus.png) 0 0;
+}
+
+.collapseAddButton {
+	background: url(../../Images/FAST-V1.0/add.png) 0 0;
+}
+
+a.centerRefreshButton {
+	position: relative;
+	display: inline-block;
+	width: 19px;
+	height: 19px;
+	background: url(../../Images/FAST-V1.0/refresh.png) 0 0;
+	margin-right: 2px;
+	top: 20px;
+	vertical-align: top;
+}
+
+.centerContent {
+	width: 100%;
+	height: 260px;
+	display: block;
+}
+
+.totalCenterDiv {
+	margin-left: 2%;
+	margin-right: 2%;
+	vertical-align: middle;
+	width: 96%;
+	height: 260px;
+}
+
+.bottombutton {
+	display: block;
+	margin-top: 15px;
+	height: 30px;
+	margin-bottom: 5px;
+}
+
+	.bottombutton a, .bottombutton input, .bottombutton img, .bottombutton span {
+		position: relative;
+		top: 10px;
+		float: left;
+		margin-left: 10px;
+		display: inline-block;
+		width: 19px;
+		height: 19px;
+	}
+
+#btmMoveTop {
+	background: transparent url("../../Images/FAST-V1.0/ico.png") repeat scroll -7px -80px;
+	margin-left: 43px;
+}
+
+#btmMoveUp {
+	background: transparent url("../../Images/FAST-V1.0/ico.png") repeat scroll -41px -80px;
+}
+
+#btmMoveDown {
+	background: transparent url("../../Images/FAST-V1.0/ico.png") repeat scroll -79px -80px;
+}
+
+#btmMoveBottom {
+	background: transparent url("../../Images/FAST-V1.0/ico.png") repeat scroll -113px -80px;
+}
+
+#btmToggleCheckbox {
+	/*background: transparent url("../../Images/FAST-V1.0/ico.png") repeat scroll -150px -80px;*/
+}
+
+#btmDelete {
+	background: transparent url("../../Images/FAST-V1.0/ico.png") repeat scroll -217px -80px;
+}
+
+a.bottomSeparator {
+	background: transparent url("../../Images/FAST-V1.0/ico.png") repeat scroll -282px -80px;
+}
+
+#btmParking {
+	background: transparent url("../../Images/FAST-V1.0/ico.png") repeat scroll -253px -80px;
+}
+
+#btmEMI {
+	width: 35px;
+	background: transparent url("../../Images/FAST-V1.0/ico.png") repeat scroll -314px -80px;
+}
+
+#spantimetitle {
+	top: 8px;
+	width: 70px;
+	font-size: 12pt;
+	color: #8D8D8D;
+}
+
+#spantime {
+	top: 10px;
+	font-size: 12pt;
+	font-weight: bold;
+	font-family: Stencil;
+	color: #8D8D8D;
+}
+
+#detailTask {
+	position: absolute;
+	z-index: 9999;
+	display: none;
+	top: 146px;
+	left: 1310px;
+	width: 280px;
+	height: 125px;
+	text-align: left;
+	background-color: #EDEFF3;
+	overflow: visible;
+	border: 1px solid #aaaaaa;
+}
+
+	#detailTask ul {
+		margin-top: 10px;
+		width: 100%;
+		min-height: 100px;
+		max-height: 245px;
+		text-align: left;
+		overflow: hidden;
+	}
+
+		#detailTask ul li {
+			padding: 0px 0px 0px 15px;
+			display: block;
+			height: 15px;
+			margin-top: 5px;
+			border: 0px;
+			text-align: left;
+		}
+
+			#detailTask ul li span {
+				position: relative;
+				float: left;
+				padding: 0px 0px 0px 15px;
+				color: gray;
+			}
+
+	#detailTask li i {
+		position: relative;
+		margin: 0px 0px 0px 10px;
+		float: left;
+		width: 23px;
+		height: 17px;
+		/*background: url(../../Images/FAST-V1.0/ok.png) 0 0;*/
+	}
+
+		#detailTask li i.notfinish {
+			position: relative;
+			margin: 0px 0px 0px 10px;
+			float: left;
+			width: 23px;
+			height: 17px;
+			/*background: url(../../Images/FAST-V1.0/no.png) 0 0;*/
+		}
+
+	#detailTask li em {
+		float: left;
+		width: 15px;
+		height: 15px;
+		background: url(../../Images/FAST-V1.0/triangleright.png) no-repeat;
+	}
+
+	#detailTask li .active em {
+		background: url(../../Images/FAST-V1.0/triangledown.png) no-repeat;
+	}
+
+	#detailTask ul.tasksecondstatus {
+		margin: 0 0 0 0;
+		display: none;
+		height: 142px;
+		overflow: hidden;
+	}
+
+		#detailTask ul.tasksecondstatus span {
+			position: relative;
+			float: left;
+		}
+
+ul .tasksecondstatus li {
+	position: relative;
+	float: left;
+	margin: 0px 0 0px 40px;
+	width: 100%;
+	height: 10px;
+	font-size: 10px;
+	text-align: left;
+}
+
+.linkbutton {
+	border-style: none;
+	color: Blue;
+	background-color: none;
+}
+
+/*
+** 观测任务编辑样式
+********************************************************************************************************************************/
+.righttop {
+	width: 100%;
+	height: 80px;
+	float: right;
+	background-color: #EDEDED;
+}
+
+.righttop1 {
+	width: 100%;
+	height: 30px;
+	float: left;
+}
+
+div.righttoptitle {
+	display: inline;
+	float: left;
+	color: #333;
+	font-size: 16px;
+	font-weight: 800;
+	padding: 14px 0 10px 30px;
+}
+
+.righttop2 {
+	width: 100%;
+	height: 50px;
+	float: left;
+	padding: 7px 0;
+}
+
+div.search {
+	float: left;
+	padding: 0 0 10px 20px;
+	font-size: 13px;
+	color: #000;
+}
+
+.righttop2 label {
+	float: left;
+	padding: 10px 0 0 15px;
+	position: relative;
+	margin-top: 3px;
+}
+
+div.search input, select {
+	float: left;
+	width: 185px;
+	height: 20px;
+	background-color: #FFF;
+	border: 1px solid #E9DBDB;
+	position: relative;
+	margin-top: 10px;
+	margin-left: 10px;
+	padding: 0;
+	border-radius: 2px;
+	text-align: left;
+}
+
+div.search a {
+	width: 19px;
+	height: 19px;
+	background: url(../../Images/FAST-V1.0/ico.png) 0 0;
+	position: relative;
+	margin-top: 10px;
+	margin-left: 6px;
+	padding: 0;
+	float: left;
+}
+
+.operationbutton a {
+	position: relative;
+	float: left;
+	display: inline-block;
+	width: 19px;
+	height: 22px;
+	margin-top: 8px;
+	margin-left: 8px;
+	padding: 0;
+}
+
+#btnInsert {
+	background: url(../../Images/FAST-V1.0/ico.png) -3px -35px;
+}
+
+#btnSave {
+	background: url(../../Images/FAST-V1.0/ico.png) -35px -35px;
+}
+
+#btnDelete {
+	background: url(../../Images/FAST-V1.0/ico.png) -68px -35px;
+}
+
+#btnImport {
+	background: url(../../Images/FAST-V1.0/ico.png) -102px -35px;
+}
+
+#btnExport {
+	background: url(../../Images/FAST-V1.0/ico.png) -135px -35px;
+}
+
+.rightbottom {
+	position: relative;
+	margin: 0;
+	width: 100%;
+	min-height: 581px;
+	background-color: #DBDBDB;
+	float: right;
+}
+
+/*
+** 观测任务队列选择样式
+********************************************************************************************************************************/
+.doubleCenterDiv {
+	position: absolute;
+	width: 42%;
+	background-color: #FFF;
+	min-height: 570px;
+	overflow: hidden;
+}
+
+.leftCenterDiv {
+	float: left;
+	margin-left: 2%;
+}
+
+.rightCenterDiv {
+	float: left;
+	margin-left: 52%;
+	margin-right: 2%;
+}
+
+.selectionbutton {
+	position: absolute;
+	float: left;
+	width: 50px;
+	height: 60%;
+	margin-left: 46.5%;
+	background-color: #FFF;
+	margin-top: 80px;
+}
+
+	.selectionbutton a {
+		display: block;
+		float: left;
+		margin-left: 8px;
+		padding: 0;
+		width: 38px;
+		height: 35px;
+	}
+
+#btnSelectLeft {
+	background: transparent url("../../Images/FAST-V1.0/ico.png") repeat scroll 0 -195px;
+	margin-top: 100px;
+}
+
+#btnSelectRight {
+	background: transparent url("../../Images/FAST-V1.0/ico.png") repeat scroll 0 -143px;
+	margin-top: 30px;
+}
+
+/*
+** 干扰源管理样式
+********************************************************************************************************************************/
+#btnConfirm {
+	margin-top: 10px;
+	margin-left: 20px;
+	background: url(../../Images/FAST-V1.0/ico.png) -38px 0;
+}
+
+#btnCancel {
+	margin-top: 10px;
+	background: url(../../Images/FAST-V1.0/ico.png) -68px 0;
+}
+
+div.CenterPanelX {
+	margin: 2% 2% 0 2%;
+	vertical-align: middle;
+	width: 96%;
+	height: 340px;
+	display: block;
+	background-color: White;
+}
+
+/*
+** 系统参数管理样式
+********************************************************************************************************************************/
+
+.configZone {
+	float: left;
+	position: relative;
+	width: 100%;
+	height: 30px;
+	margin: 10px 0 5px 40px;
+}
+
+	.configZone label, .configZone input, .configZone span {
+		position: relative;
+		float: left;
+		width: 140px;
+		height: 20px;
+		margin-top: 3px;
+		text-align: left;
+		background-color: #FFF;
+		position: relative;
+		padding: 0;
+		border-radius: 2px;
+	}
+
+	.configZone input {
+		width: 180px;
+		margin-top: 0;
+		border: 1px solid #E9DBDB;
+	}
+
+	.configZone span {
+		width: 420px;
+		margin-left: 10px;
+	}
+
+/*
+** 整体调试管理样式
+********************************************************************************************************************************/
+#btnEnter {
+	background: url(../../Images/FAST-V1.0/ico.png) -175px -35px;
+}
+
+#btnExit {
+	background: url(../../Images/FAST-V1.0/ico.png) -215px -35px;
+}
+
+/*
+** 系统权限管理样式
+********************************************************************************************************************************/
+.threeCenterDiv {
+	position: absolute;
+	background-color: #FFF;
+	min-height: 570px;
+	overflow: hidden;
+}
+
+.oneCenterDiv {
+	width: 20%;
+	float: left;
+	margin-left: 2%;
+}
+
+.twoCenterDiv {
+	width: 68%;
+	float: left;
+	margin-left: 26%;
+	margin-right: 2%;
+}
+
+.centerBottom {
+	position: relative;
+	float: left;
+	width: 100%;
+}
+
+	.centerBottom input, #iptConfirm, #iptCancel {
+		position: relative;
+		float: left;
+		top: 20px;
+		left: 130px;
+		width: 80px;
+		height: 30px;
+		text-align: center;
+		cursor: pointer;
+		background-color: #40BBEA;
+	}
+
+#iptRefresh, #iptCancel {
+	margin-left: 60px;
+}
+
+/*
+** 样式
+********************************************************************************************************************************/
+
+label.sname, label.taskstate, label.starttmvalue, label.lasttmvalue, label.endtmvalue {
+	padding-left: 6px;
+}
+
+label.lasttmvalue, label.endtmvalue {
+	font-size: 16px;
+	color: #2AC51A;
+	font-weight: bold;
+	padding-top: 6px;
+}
+
+label.endtmvalue {
+	color: #F88F19;
+}
+
+.righttop2 .displaylbzone {
+	float: left;
+	padding: 0px 0px 10px 12px;
+}
+
+.righttop2 .displaylbzone2 {
+	float: left;
+	margin-top: 3px;
+	background-color: Black;
+}
+
+.bluetext {
+	color: Blue;
+	font-weight: bolder;
+}
+
+.righttop2 .displaylbzone2 #label1, .righttop2 .displaylbzone2 #label2, .righttop2 .displaylbzone2 #label3 {
+	padding: 0px 5px;
+	color: White;
+	height: 100%;
+	vertical-align: middle;
+	display: block;
+	font-size: 10px;
+}
+
+.righttop2 .displaylbzone2 #label1 {
+	top: 10px;
+	font-size: 16px;
+	display: inline-block;
+	height: 100%;
+}
+
+.righttop2 .displaylbzone2 #label3 {
+	top: 20px;
+	float: right;
+}
+
+.valuetop .speciallabeldisplaylbzone {
+	float: left;
+	position: absolute;
+	margin: 5px 0px 25px 10px;
+	font-size: 16px;
+}
+
+.valuetop label {
+	float: left;
+	padding: 10px 5px 0px 0px;
+	position: relative;
+	margin-top: 0px;
+}
+
+.valuetop .bvalue {
+	font-size: 15px;
+	color: #1483F0;
+	font-weight: bold;
+	padding-top: 8px;
+	width: 160px;
+}
+
+.valuetop .gvalue {
+	font-size: 15px;
+	color: #2AC51A;
+	font-weight: bold;
+	padding-top: 8px;
+	width: 160px;
+}
+
+.valuetop .ovalue {
+	font-size: 15px;
+	color: #F88F19;
+	font-weight: bold;
+	padding-top: 8px;
+	width: 160px;
+}
+
+.speciallabeldisplaylbzone label {
+	width: 140px;
+	text-align: right;
+}
+
+div.divtasktop1, div.divtasktop2 {
+	float: left;
+	position: relative;
+	margin: 20px 0px 5px 45px;
+	vertical-align: middle;
+	width: 480px;
+	height: 190px;
+	display: block;
+	background-color: rgb(207, 206, 202);
+	overflow: hidden;
+}
+
+div.divtasktop1 {
+	height: 190px;
+}
+
+div.divtasktop2 {
+	height: 330px;
+}
+
+div.divtasktoptitle {
+	display: block;
+	height: 20px;
+	margin-bottom: 10px;
+}
+
+div.divtasktoptitlezone {
+	display: inline;
+	float: left;
+	color: #333;
+	font-size: 16px;
+	padding: 15px 0px 20px 20px;
+}
+
+div.divtasktopbtn {
+	display: inline;
+	float: right;
+	width: 100px;
+	height: 100%;
+}
+
+a.itemCollapseButton, a.itemRefreshButton {
+	position: relative;
+	display: inline-block;
+	width: 19px;
+	height: 19px;
+}
+
+a.itemCollapseButton {
+	margin-right: 2px;
+	top: 20px;
+	vertical-align: top;
+}
+
+a.itemAddButton {
+	background: url(../../Images/FAST-V1.0/ico.png) -156px -4px;
+}
+
+a.itemDelButton {
+	background: url(../../Images/FAST-V1.0/ico.png) -131px -4px;
+}
+
+a.itemRefreshButton {
+	background: url(../../Images/FAST-V1.0/ico.png) -181px -4px;
+	margin: 20px 2px 20px 0;
+}
+
+.divdatatoptablezonefskz {
+	background-color: rgb(207, 206, 202);
+	display: block;
+	float: left;
+	position: absolute;
+	margin: 5px 0px 10px 2%;
+	float: left;
+	padding: 0px;
+	width: 94%;
+	height: 70%;
+}
+
+.divdatatoptablezonefskz2 {
+	background-color: rgb(207, 206, 202);
+	float: left;
+	position: relative;
+	margin: 120px 0px 10px 2%;
+	float: left;
+	padding: 0px;
+	width: 94%;
+	height: 40%;
+}
+
+.titletop {
+	width: 100%;
+	height: 5%;
+	float: left;
+	margin: 5px 0px 5px 0px;
+}
+
+.righttoptitle {
+	display: inline;
+	float: left;
+	color: #333;
+	font-size: 14px;
+	padding: 14px 0px 10px 13px;
+}
+
+.divvaluetop {
+	width: 100%;
+	height: 15%;
+	float: left;
+	position: relative;
+	padding: 2px 0px 0px 2px;
+}
+
+.valuetop {
+	width: 100%;
+	height: 15%;
+	float: left;
+	position: relative;
+	padding: 25px 0px 0px 2px;
+}
+
+	.valuetop .displaylbzone {
+		float: left;
+		position: absolute;
+		margin: 0px 0px 10px 30px;
+		font-size: 14px;
+	}
+
+.bluetext {
+	color: Blue;
+	font-weight: bolder;
+}
+
+.valuetop .speciallabeldisplaylbzone {
+	float: left;
+	position: absolute;
+	margin: 5px 0px 25px 10px;
+	font-size: 16px;
+}
+
+.valuetop label {
+	float: left;
+	padding: 10px 5px 0px 0px;
+	position: relative;
+	margin-top: 0px;
+}
+
+.valuetop .bvalue {
+	font-size: 15px;
+	color: #1483F0;
+	font-weight: bold;
+	padding-top: 8px;
+	width: 160px;
+}
+
+.valuetop .gvalue {
+	font-size: 15px;
+	color: #2AC51A;
+	font-weight: bold;
+	padding-top: 8px;
+	width: 160px;
+}
+
+.valuetop .ovalue {
+	font-size: 15px;
+	color: #F88F19;
+	font-weight: bold;
+	padding-top: 8px;
+	width: 160px;
+}
+
+.speciallabeldisplaylbzone label {
+	width: 140px;
+	text-align: right;
+}
+/*
+** 样式
+********************************************************************************************************************************/
+
+/*
+** 样式
+********************************************************************************************************************************/
+
+/*
+** 样式
+********************************************************************************************************************************/
+
+/*
+** 样式
+********************************************************************************************************************************/

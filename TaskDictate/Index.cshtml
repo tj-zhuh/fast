@@ -1,0 +1,29 @@
+﻿<div class="center-header-container">
+    <div class="center-header-title">
+        <div class="center-header-title-show">系统指令管理</div>
+    </div>
+    <div class="center-header-query">
+        <div class="header-query-search">
+            <label class="header-query-search-label">目标源:</label>
+            <select id="combo_system_code" class="header-query-search-input">
+                <option value="">请选择目标源......</option>
+                <option value="ZK">总控系统</option>
+                <option value="FK">主动反射面控制</option>
+                <option value="FC">主动反射面测量</option>
+                <option value="FJK">主动反射面健康监测</option>
+                <option value="KZK">馈源支撑整体控制</option>
+                <option value="KC">馈源支撑测量</option>
+                <option value="KJK">馈源支撑健康监测</option>
+                <option value="JSJ">接收机与终端</option>
+            </select>
+            <label class ="header-query-search-label">开始时间：</label>
+            <input id="txtSTATISTICS_TIME_BEGIN" class="header-query-search-input" placeholder="开始时间......" type="date" />
+            <label class="header-query-search-label">结束时间：</label>
+            <input id="txtSTATISTICS_TIME_END" class="header-query-search-input" placeholder="结束时间......" type="date" />
+            <a class="center-header-button-query" href="javascript:HeaderQueryData();"></a>
+        </div>
+    </div>
+</div>
+<div class="center-grid-basic-border">
+    <div id="pnlGirdView" class="center-grid-basic-area"></div>
+</div>

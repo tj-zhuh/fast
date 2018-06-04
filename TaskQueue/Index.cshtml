@@ -1,0 +1,59 @@
+﻿<div class="ctx task-queue-contaienr">
+	<div class="center-header-container" style="background-color: #f8f8f8;">
+		<div class="center-header-title">
+			<div class="center-header-title-show">观测任务选择</div>
+		</div>
+		<div class="center-header-query">
+			<div class="header-query-search">
+				<label class="header-query-search-label">源名 :</label>
+				<input id="txtSEQUENCE_NAME" class="header-query-search-input" type="text" />
+			</div>
+			<div class="header-query-search">
+				<label class="header-query-search-label">起始时刻 :</label>
+				<input id="starttmvalue" class="header-query-search-input" type="text" />
+			</div>
+			<div class="header-query-search">
+				<label class="header-query-search-label">任务标识 :</label>
+				<input id="taskid" class="header-query-search-input" type="text" />
+			</div>
+			<div class="header-query-search">
+				<label class="header-query-search-label">备注 :</label>
+				<input id="remark" class="header-query-search-input" type="text" />
+				<a class="center-header-button-query" href="javascript:query_button_clicked();"></a>
+			</div>
+		</div>
+	</div>
+
+	<div class="panel main-panel">
+		<div class="panel-body">
+			<div class="center-sub center-grid-left">
+				<div class="center-grid-first-header">
+					<div class="center-grid-first-header-title">观测源列表</div>
+					@*<a id="btmCancel" class="button-grid-cancel" href="javascript:void(0);"></a>*@
+					<a id="btmRefresh" class="button-grid-refresh" style="margin-right:20px;" href="javascript:query1();"></a>
+					<a id="btmMinimize" class="button-grid-minimize " href="javascript:ViewMinimumSize1()"></a>
+				</div>
+				<div id="grid-container1" class="center-grid"></div>
+			</div>
+			<div id="move-buttons" class="center-sub center-grid-middle">
+				<div id="button-to-right" class="arrow-button"></div>
+				<div id="button-to-left" class="arrow-button"></div>
+			</div>
+			<div class="center-sub center-grid-right">
+				<div class="center-grid-first-header">
+					<div class="center-grid-first-header-title">观测队列列表</div>
+					@*<a id="btmCancel" class="button-grid-cancel" href="javascript:void(0);"></a>*@
+					<a id="btmRefresh" class="button-grid-refresh" href="javascript:query2(0);"></a>
+					<a id="btmMinimize" class="button-grid-minimize " href="javascript:ViewMinimumSize2();"></a>
+				</div>
+				<div id="grid-container2" class="center-grid"></div>
+			</div>
+			<div id="up-down-buttons" class="center-sub center-grid-more-right">
+				<div id="btmMoveTop" class="grid-first-button"></div>
+				<div id="btmMoveUp" class="grid-preview-button"></div>
+				<div id="btmMoveDown" class="grid-next-button"></div>
+				<div id="btmMoveBottom" class="grid-last-button"></div>
+			</div>
+		</div>
+	</div>
+</div>

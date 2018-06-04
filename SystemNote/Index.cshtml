@@ -1,0 +1,21 @@
+﻿<div class="center-header-container">
+	<div class="center-header-title">
+		<div class="center-header-title-show">系统操作管理</div>
+	</div>
+	<div class="center-header-query">
+		<div class="header-query-search">
+			<label class="header-query-search-label">时间:</label>
+			<input id="txtSTATISTICS_TIME_BEGIN" class="header-query-search-input" placeholder="开始时间" type="date" />
+			<input id="txtSTATISTICS_TIME_END" class="header-query-search-input"  placeholder="结束时间" type="date" />
+			<a class="center-header-button-query" href="javascript:HeaderQueryData();"></a>
+		</div>
+	</div>
+</div>
+<div class="center-grid-basic-border">
+	<div class="center-grid-first-header">
+		<div class="center-grid-first-header-title"></div>
+		<a id="btmCancel" class="button-grid-cancel" href="javascript:GridViewClose();"></a>
+		<a id="btmMinimize" class="button-grid-minimize " href="javascript:ViewMinimumSize();"></a>
+		<a id="btmRefresh" class="button-grid-refresh" href="javascript:HeaderQueryData();"></a>
+	</div>  <div id="pnlGirdView" class="center-grid-basic-area"></div>
+</div>

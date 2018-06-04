@@ -1,0 +1,27 @@
+﻿@{
+	ViewBag.Title = "ScientistView";
+	Layout = "~/Views/FASTHomeInns/MenuScientist.cshtml";
+}
+
+<div class="main-center-container">
+</div>
+
+<script type="text/javascript">
+	var urlLink = '../FASTHome/NormalView';
+	var jsLink = '../Web_GlobalResources/FASTjs-V2.0/FASTHome.js';
+	$.post(urlLink, { username: 'UserName', password: 'Password' },
+		function (data) {
+			if (!data) {
+				/*返回为空或异常*/
+				throw new Error("The response is null or error.");
+			} else {
+				$('div.main-center-container').empty().append(data);
+
+				jQuery.getScript(jsLink, function () {
+					if (typeof LoadGridData == 'function') {
+						LoadGridData();
+					}
+				});
+			}
+		});
+</script>

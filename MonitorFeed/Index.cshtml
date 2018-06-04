@@ -1,0 +1,127 @@
+﻿<style>
+	.monitor-feed-container * {
+		text-align: left;
+		font-family: 'Microsoft YaHei';
+		background-color: transparent;
+	}
+
+	.monitor-feed-container {
+		background-color: #e0e8e8;
+		min-height: 600px;
+		position: absolute;
+		width: 100%;
+		overflow: hidden;
+	}
+
+		.monitor-feed-container .panel {
+			position: absolute;
+			top: 10px;
+			left: 10px;
+			right: 10px;
+			background-color: #595959;
+		}
+
+		.monitor-feed-container .panel-title {
+			position: absolute;
+			top: 28px;
+			left: 56px;
+			color: #fff;
+			font: normal 16px '黑体';
+		}
+
+		.monitor-feed-container #circleDiv1 {
+			position: absolute;
+			left: 5.9%;
+			top: 8.6%;
+			height: 48.7%;
+			width: 31.6%;
+			z-index: 1;
+		}
+
+		.monitor-feed-container #circleDiv2 {
+			position: absolute;
+			left: 6.5%;
+			top: 33.5%;
+			height: 47.5%;
+			width: 31.0%;
+			z-index: 1;
+		}
+
+		.monitor-feed-container #chartDiv1 {
+			position: absolute;
+			left: 44.4%;
+			top: 7.8%;
+			height: 23.7%;
+			width: 51.6%;
+			z-index: 1;
+		}
+
+		.monitor-feed-container #chartDiv2 {
+			position: absolute;
+			left: 44.4%;
+			top: 37.3%;
+			height: 23.7%;
+			width: 51.6%;
+			z-index: 1;
+		}
+
+		.monitor-feed-container #trdDiv {
+			position: absolute;
+			left: 47%;
+			top: 66.0%;
+			height: 13.9%;
+			width: 50%;
+			font-family: Arial;
+			font-size: 34px;
+			font-weight: bold;
+			color: #28b5a8;
+			text-align: left;
+		}
+
+		.monitor-feed-container .line {
+			height: 33%;
+		}
+
+		.monitor-feed-container .xyz-label {
+			margin-left: 5%;
+		}
+	/*.monitor-feed-container .green-text { color: #01f802; }
+	.monitor-feed-container .yellow-text { color: #fef100; }*/
+</style>
+
+<div class="ctx container monitor-feed-container">
+	<div class="panel" style="overflow:hidden;">
+		<img src="~/Web_GlobalResources/Web_Themes/Images/FAST-V2.0/MoniterFeedBg.png" />
+		<div class="panel-title">馈源支撑</div>
+		<div id="circleDiv1" class="subpanel ball"></div>
+		<div id="circleDiv2" class="subpanel half-ball"></div>
+		<div id="chartDiv1" class="subpanel chart"></div>
+		<div id="chartDiv2" class="subpanel chart"></div>
+		<div id="trdDiv" class="subpanel datas-box">
+			<div class="line">
+				<span class="xyz-label">X:</span>
+				<span class="text" id="span-t-x"></span>
+				<span class="xyz-label">Y:</span>
+				<span class="text" id="span-t-y"></span>
+				<span class="xyz-label">Z:</span>
+				<span class="text" id="span-t-z"></span>
+			</div>
+			<div class="line">
+				<span class="xyz-label">X:</span>
+				<span class="text" id="span-r-x"></span>
+				<span class="xyz-label">Y:</span>
+				<span class="text" id="span-r-y"></span>
+				<span class="xyz-label">Z:</span>
+				<span class="text" id="span-r-z"></span>
+			</div>
+			<div class="line">
+				<span class="xyz-label">X:</span>
+				<span class="text green-text" id="span-d-x"></span>
+				<span class="xyz-label">Y:</span>
+				<span class="text green-text" id="span-d-y"></span>
+				<span class="xyz-label">Z:</span>
+				<span class="text yellow-text" id="span-d-z"></span>
+			</div>
+		</div>
+	</div>
+</div>
